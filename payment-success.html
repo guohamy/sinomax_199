@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth <= 750) {
+                    docEl.style.fontSize = (clientWidth / 750 * 100).toFixed(1) + 'px';
+                }else{
+                    docEl.style.fontSize = '100px';
+                }
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <title>支付成功</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<div class="main-content payment-success-page">
+    <div class="nav-bar__block">
+        <div class="nav-bar">
+            <div class="nav-bar__right">
+                <a class="nav-bar__text">完成</a>
+            </div>
+        </div>
+    </div>
+    <div class="payment__success-content">
+        <div class="payment__success-box">
+            <img src="images/icon__payment-success.png" alt="">
+            <p class="payment__success-text">支付成功</p>
+        </div>
+        <div class="payment__success-items">
+            <div class="payment__success-cell bottom-line">
+                <div class="success-cell__title">订单编号</div>
+                <div class="success-cell__text">607800099988</div>
+            </div>
+            <div class="payment__success-cell">
+                <div class="success-cell__title">订单金额</div>
+                <div class="success-cell__text">¥368.00</div>
+            </div>
+            <div class="payment__success-cell">
+                <div class="success-cell__title">支付金额</div>
+                <div class="success-cell__text">¥360.00</div>
+            </div>
+        </div>
+        <a href="" class="payment__success-button">查看订单</a>
+    </div>
+</div>
+
+</body>
+</html>

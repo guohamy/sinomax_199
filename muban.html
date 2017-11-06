@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth <= 750) {
+                    docEl.style.fontSize = (clientWidth / 750 * 100).toFixed(1) + 'px';
+                }else{
+                    docEl.style.fontSize = '100px';
+                }
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <title>模板页</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<div class="main-content">
+    <div class="nav-bar__block">
+        <div class="nav-bar bottom-line">
+            <div class="nav-bar__left">
+                <span class="nav-bar__back-button nav-bar__arrow"></span>
+            </div>
+            <div class="nav-bar__title">xxx</div>
+        </div>
+        <div class="nav-bar__right">
+            <a class="nav-bar__text"></a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

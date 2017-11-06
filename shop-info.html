@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth <= 750) {
+                    docEl.style.fontSize = (clientWidth / 750 * 100).toFixed(1) + 'px';
+                }else{
+                    docEl.style.fontSize = '100px';
+                }
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <title>商品详细信息</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="main-content">
+    <div class="nav-bar__block">
+        <div class="nav-bar bottom-line">
+            <div class="nav-bar__left">
+                <span class="nav-bar__back-button nav-bar__arrow"></span>
+            </div>
+            <div class="nav-bar__title">订单详情</div>
+            <div class="nav-bar__right">
+                <a class="nav-bar__text icon-arrow__share">分享</a>
+            </div>
+        </div>
+    </div>
+
+    <!--幻灯片-->
+    <div data-js="swipe-box" class="m-swipe">
+        <div class="swipe-wrap">
+            <div class="swipe-item">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="images/shop-goods__img.jpg" alt="">
+            </div>
+            <div class="swipe-item">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="images/img.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!--商品信息-->
+    <div class="shop-about">
+        <h2 class="shop-about__title">HAChill for PH2016-2</h2>
+        <p class="shop-about__des">Sun in sky 指定合作高端眼镜品牌</p>
+        <p class="shop-about__price">¥1,680</p>
+        <a class="shop-about__figure">
+            <i class="shop-about__figure-img" style="background-image: url(images/av.png)"></i>
+            <span class="shop-about__figure-name">邓紫棋</span>
+            <span class="shop-about__figure-des">HACHill代言人</span>
+            <em class="shop-about__figure-video">边看边买</em>
+        </a>
+        <ul class="shop-about__tags">
+            <li class="shop-about__tag">包邮</li>
+            <li class="shop-about__tag">七天无理由退款</li>
+            <li class="shop-about__tag">正品保障</li>
+            <li class="shop-about__tag">香港直邮</li>
+        </ul>
+        <div class="shop-about__cell shop-about__cell--coupon top-line icon-arrow__right">
+            <div class="shop-about__cell-left">优惠</div>
+            <div class="shop-about__cell-right">购买立即减88.8元</div>
+            <!--<div class="shop-about__cell-right"><span class="shop-about__coupon-des">购买立即减88.8元</span></div>-->
+        </div>
+        <div class="shop-about__cell shop-about__cell--selected top-line icon-arrow__right">
+            <div class="shop-about__cell-left">已选</div>
+            <div class="shop-about__cell-right"><span class="shop-about__selected">HC8260_C1</span></div>
+        </div>
+        <div class="shop-about__cell shop-about__cell--address top-line icon-arrow__right">
+            <div class="shop-about__cell-left">送至</div>
+            <div class="shop-about__cell-right"><p class="address__msg icon-arrow__pos">广州市天河区林和西路3-15号耀中广场B座4209-4210室</p></div>
+        </div>
+        <div class="shop-about__cell shop-about__cell--postage">
+            <div class="shop-about__cell-left">邮费</div>
+            <div class="shop-about__cell-right">包邮</div>
+        </div>
+    </div>
+
+    <!--店铺信息-->
+    <div class="m-store">
+        <div class="m-store__head">
+            <img class="m-store__logo" src="images/shop-logo.png" alt="">
+            <h3 class="m-store__title">HAChill官方旗舰店</h3>
+            <p class="m-store__des">哈超席卷中国南区</p>
+        </div>
+        <div class="m-store__body">
+            <div class="m-store__box">
+                <p class="m-store__box-title">2998</p>
+                <p class="m-store__box-des">关注人数</p>
+            </div>
+            <div class="m-store__box">
+                <p class="m-store__box-title">9.1万</p>
+                <p class="m-store__box-des">商品数</p>
+            </div>
+        </div>
+        <a href="" class="m-store__button">进入店铺</a>
+    </div>
+
+    <!--商品图片信息-->
+    <div class="shop-picture">
+        <div class="shop-picture__title">商品详情</div>
+        <div class="shop-picture__box">
+            <img class="lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="images/img.png" alt="">
+        </div>
+        <div class="shop-picture__box">
+            <img class="lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="images/img.png" alt="">
+        </div>
+        <div class="shop-picture__box">
+            <img class="lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="images/img.png" alt="">
+        </div>
+    </div>
+
+    <!--购买模块-->
+    <div class="footer-nav__fixed-bar">
+        <div class="footer-nav__block top-line">
+            <div class="shop-info__block">
+                <a href="" class="shop-info__btn">
+                    <i class="shop-info__btn-icon shop-info__btn-icon--shop"></i>
+                    <span class="shop-info__btn-text">店铺</span>
+                </a>
+                <a href="" class="shop-info__btn">
+                    <i class="shop-info__btn-icon shop-info__btn-icon--like"></i>
+                    <span class="shop-info__btn-text">关注</span>
+                </a>
+                <a href="" class="shop-info__btn">
+                    <i class="shop-info__btn-icon shop-info__btn-icon--cart"></i>
+                    <span class="shop-info__btn-text">购物车</span>
+                </a>
+                <button class="button button--cart" data-js="button--cart">加入购物车</button>
+                <button class="button button--buy">立即购买</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--弹窗-->
+<!--<div class="mask"></div>-->
+<!--优惠-->
+<div class="win-mod" style="display: none">
+    <div class="win-mod__head">
+        <h4 class="win-mod__title">优惠</h4>
+        <a href="" class="win-mod__close-btn"></a>
+    </div>
+    <div class="win-mod__body">
+        <!--代金券-->
+        <div class="coupon-cell" data-state="voucher">
+            <img class="coupon__logo" src="images/shop-logo.png" alt="">
+            <p class="coupon__des">HAChill（哈超）旗下所有商品购买立减100</p>
+            <p class="coupon__times">有效期至 2017-12-8</p>
+            <span class="coupon__state-button">马上使用</span>
+        </div>
+        <!--满减券-->
+        <div class="coupon-cell" data-state="min">
+            <img class="coupon__logo" src="images/shop-logo.png" alt="">
+            <p class="coupon__des">HAChill（哈超）旗下所有商品购买立减100</p>
+            <p class="coupon__times">有效期至 2017-12-8</p>
+            <span class="coupon__state-button" data-state="overdue">已过期</span>
+        </div>
+        <!--打骨折券-->
+        <div class="coupon-cell" data-state="discount">
+            <img class="coupon__logo" src="images/shop-logo.png" alt="">
+            <p class="coupon__des">HAChill（哈超）旗下所有商品</p>
+            <p class="coupon__times">有效期至 2017-12-8</p>
+            <span class="coupon__state-button" data-state="used">已使用</span>
+        </div>
+    </div>
+    <div class="win-mod__footer">
+
+    </div>
+</div>
+
+<!--收货地址-->
+<div class="win-mod win-mod--address" style="display: none">
+    <div class="win-mod__head">
+        <h4 class="win-mod__title">收货地址</h4>
+        <a href="" class="win-mod__close-btn"></a>
+    </div>
+    <div class="win-mod__body">
+        <div class="address-cell cur" data-state="selected">
+            <p class="address__msg icon-arrow__pos">广州市天河区林和西路3-15号耀中广场B座4209-4210室</p>
+        </div>
+        <div class="address-cell">
+            <p class="address__msg icon-arrow__pos">广州市天河区林和西路3-15号耀中广场B座4209-4210室</p>
+        </div>
+        <div class="address-cell">
+            <p class="address__msg icon-arrow__pos">广州市天河区林和西路3-15号耀中广场B座4209-4210室</p>
+        </div>
+        <div class="address-cell">
+            <p class="address__msg icon-arrow__pos">广州市天河区林和西路3-15号耀中广场B座4209-4210室</p>
+        </div>
+    </div>
+    <div class="win-mod__footer">
+        <a href="" class="address__add-button">新增收货地址</a>
+    </div>
+</div>
+
+<!--商品属性-->
+<div class="win" style="display: none;">
+    <a class="win__close"></a>
+    <div class="win__body">
+        <div class="product-attr">
+            <div class="product-attr__head">
+                <div class="product-attr__img"><img src="images/shop-logo.png" alt=""></div>
+                <h3 class="product-attr__title">¥1,680</h3>
+            </div>
+            <div class="product-cell">
+                <h3 class="product-cell__title">颜色</h3>
+                <div class="tags-box">
+                    <span class="tags">黑镜片金边框</span>
+                    <span class="tags">黑镜片金边框</span>
+                    <span class="tags">黑镜片金边框</span>
+                </div>
+            </div>
+            <div class="product-cell product-cell--stepper">
+                <h3 class="product-cell__title">数量</h3>
+                <div class="button-stepper">
+                    <button class="button-stepper__minus"></button>
+                    <input type="number" class="button-stepper__input" value="1">
+                    <button class="button-stepper__add"></button>
+                </div>
+            </div>
+            <!--<div class="shop-row shop-row&#45;&#45;stepper">
+                <h3 class="shop-row__title">数量</h3>
+                <div class="van-stepper"><button class="van-stepper__stepper van-stepper__minus van-stepper__minus&#45;&#45;disabled"></button><input type="number" class="van-stepper__input"><button class="van-stepper__stepper van-stepper__plus"></button></div>
+            </div>-->
+        </div>
+    </div>
+    <div class="button-ground">
+        <button class="button button--submit">确定</button>
+    </div>
+</div>
+
+<div class="popup-page-wrap">
+    <div class="popup-mask" data-show="false"></div>
+    <div class="popup-page popup-page--bottom" data-show="false">
+        <div class="popup-content">
+            <div class="product-win">
+                <a class="product-win__close" data-js="product-win__close"></a>
+                <div class="product-win__body">
+                    <div class="product-attr">
+                        <div class="product-attr__head">
+                            <div class="product-attr__img"><img src="images/shop-logo.png" alt=""></div>
+                            <h3 class="product-attr__title">¥1,680</h3>
+                        </div>
+                        <div class="product-attr__body">
+                            <div class="product-cell">
+                                <h3 class="product-cell__title">颜色</h3>
+                                <div class="tags-box">
+                                    <span class="tags cur">黑镜片金边框</span>
+                                    <span class="tags">红镜片金边框</span>
+                                    <span class="tags">蓝镜片金边框</span>
+                                </div>
+                            </div>
+                            <div class="product-cell">
+                                <h3 class="product-cell__title">颜色</h3>
+                                <div class="tags-box">
+                                    <span class="tags cur">黑镜片金边框</span>
+                                    <span class="tags">黑镜片金边框</span>
+                                    <span class="tags">黑镜片金边框</span>
+                                </div>
+                            </div>
+                            <div class="product-cell">
+                                <h3 class="product-cell__title">颜色</h3>
+                                <div class="tags-box">
+                                    <span class="tags cur">黑镜片金边框</span>
+                                    <span class="tags">黑镜片金边框</span>
+                                    <span class="tags">黑镜片金边框</span>
+                                </div>
+                            </div>
+                            <div class="product-cell">
+                                <h3 class="product-cell__title">颜色</h3>
+                                <div class="tags-box">
+                                    <span class="tags cur">黑镜片金边框</span>
+                                    <span class="tags">黑镜片金边框</span>
+                                    <span class="tags">黑镜片金边框</span>
+                                </div>
+                            </div>
+                            <div class="product-cell product-cell--stepper">
+                                <h3 class="product-cell__title">数量</h3>
+                                <div class="button-stepper">
+                                    <button class="button-stepper__minus"></button>
+                                    <input type="number" class="button-stepper__input" value="1">
+                                    <button class="button-stepper__add"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-ground">
+                    <button class="button button--submit">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/swipe.min.js"></script>
+<script type="text/javascript" src="js/lazyload.min.js"></script>
+<script type="text/javascript" src="js/layer_mobile/layer.js"></script>
+<script type="text/javascript">
+
+    var Swipe = {
+        length: 0,
+        $slider: $('[data-js="swipe-box"]'),
+        createBar: function () {
+            var html = '<div class="m-nav">';
+            for (var i = 0, len = this.length; i < len; i++) {
+                if (i) {
+                    html += '<a class="m-nav__item"></a>';
+                } else {
+                    html += '<a class="m-nav__item cur"></a>';
+                }
+            }
+            html += '</div>';
+            return html;
+        },
+        loadFirstImg: function () {
+            var firstImg = $('.swipe-item').eq(0).find('img');
+            firstImg.attr('src', firstImg.attr('data-original'))
+        },
+        init: function () {
+            if(!this.$slider.length){return}
+            this.length = $('.swipe-item').length;
+            this.$slider.append(this.createBar());
+            this.$slider.Swipe({
+                startSlide: 0,
+                auto: 5000,
+                continuous: false,
+                callback: function (index, elem) {
+//					console.log(elem);
+                    var imgNode = elem.getElementsByTagName('img')[0];
+                    if (imgNode && imgNode.getAttribute('data-original') !== 'null') {
+                        imgNode.src = imgNode.getAttribute('data-original');
+                        imgNode.setAttribute('data-original', 'null')
+                    }
+                    $('.m-nav__item').eq(index).addClass('cur').siblings().removeClass('cur');
+                }
+            });
+            this.loadFirstImg();
+        }
+    };
+
+    Swipe.init();
+
+    var $pop = {
+        popupState:false,
+        $mask:$('.popup-mask'),
+        $popup_page:$('.popup-page'),
+        show:function () {
+            this.$mask.attr('data-show','true');
+            this.$popup_page.attr('data-show','true')
+        },
+        hide:function () {
+            this.$mask.attr('data-show','false');
+            this.$popup_page.attr('data-show','false')
+        },
+        bind:function () {
+            var me = this;
+            this.$mask.on('click',function (e) {
+                me.hide();
+            })
+        },
+        init:function () {
+            this.bind();
+        }
+    };
+
+    $pop.init();
+
+    //详细图片加载
+    $(".lazy-load").not('.loaded').lazyload({
+        effect : "fadeIn",
+        load:function (ele) {
+            ele.addClass('loaded')
+        }
+    });
+
+    //打开窗口
+    $('[data-js="button--cart"]').on('click',function (e) {
+        $pop.show();
+    });
+
+    //商品属性关闭
+    $('[data-js="product-win__close"]').on('click', function (e) {
+        $pop.hide();
+    });
+
+    //商品属性选择
+    $('.tags-box').on('click','span',function (e) {
+        console.log(this);
+        $(this).addClass('cur').siblings().removeClass('cur')
+    })
+
+</script>
+</body>
+</html>

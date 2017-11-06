@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>收货地址</title>
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth <= 750) {
+                    docEl.style.fontSize = (clientWidth / 750 * 100).toFixed(1) + 'px';
+                }else{
+                    docEl.style.fontSize = '100px';
+                }
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="main-content">
+    <div class="nav-bar__block">
+        <div class="nav-bar bottom-line">
+            <div class="nav-bar__left">
+                <span class="nav-bar__back-button nav-bar__arrow"></span>
+            </div>
+            <div class="nav-bar__title">新增收货地址</div>
+            <div class="nav-bar__right">
+                <a class="nav-bar__text">保存</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form">
+        <div class="form__cell-ground">
+            <div class="form__cell form__cell--field">
+                <div class="form__cell-title">
+                    <label for="user_name" class="form__label">收货人</label>
+                </div>
+                <div class="form__cell-value">
+                    <input id="user_name" type="text" placeholder="请输入收货人姓名" class="form__input">
+                </div>
+            </div>
+            <div class="form__cell form__cell--field">
+                <div class="form__cell-title">
+                    <label for="user_name2" class="form__label">联系方式</label>
+                </div>
+                <div class="form__cell-value">
+                    <input id="user_name2" type="text" placeholder="请输入收货人手机号码" class="form__input">
+                </div>
+            </div>
+            <div class="form__cell form__cell--field">
+                <div class="form__cell-title">
+                    <label for="user_name3" class="form__label">所在地址</label>
+                </div>
+                <div class="form__cell-value">
+                    <input id="user_name3" type="text" placeholder="名字" class="form__input">
+                </div>
+            </div>
+            <div class="form__cell form__cell--field">
+                <div class="form__cell-title">
+                    <label for="" class="form__label">详细地址</label>
+                </div>
+                <div class="form__cell-value">
+                    <input id="" type="text" placeholder="如街道、楼层、门牌号等" class="form__input">
+                </div>
+            </div>
+            <div class="form__cell form__cell--switch">
+                <div class="form__cell-title">
+                    <p>设为默认地址</p>
+                    <em class="form__cell-tips">注:每次下单时会默认使用该地址</em>
+                </div>
+                <div class="form__cell-value">
+                    <div class="van-switch van-switch--on"><div class="van-switch__node van-hairline-surround"></div><div class="van-switch__bg"></div></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

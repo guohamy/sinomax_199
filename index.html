@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <title>导航列表</title>
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth <= 750) {
+                    docEl.style.fontSize = (clientWidth / 750 * 100).toFixed(1) + 'px';
+                }else{
+                    docEl.style.fontSize = '100px';
+                }
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .link{
+            display: block;
+            height: 44px;
+            line-height: 44px;
+            font-size: 16px;
+            text-align: center;
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+<div class="list">
+    <a href="order-list.html" class="link bottom-line">订单列表</a>
+    <a href="order-info.html" class="link bottom-line">订单详细页</a>
+    <a href="shop-cart.html" class="link bottom-line">购物车</a>
+    <a href="shop-info.html" class="link bottom-line">商品详细页</a>
+    <a href="add-address.html" class="link bottom-line">添加收货地址</a>
+    <a href="payment.html" class="link bottom-line">支付选择</a>
+    <a href="payment-success.html" class="link bottom-line">支付成功</a>
+    <a href="win.html" class="link bottom-line">窗口列表</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth <= 750) {
+                    docEl.style.fontSize = (clientWidth / 750 * 100).toFixed(1) + 'px';
+                }else{
+                    docEl.style.fontSize = '100px';
+                }
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <title>订单列表</title>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<div class="main-content order-page">
+    <div class="nav-bar__block">
+        <div class="nav-bar bottom-line">
+            <div class="nav-bar__left">
+                <span class="nav-bar__back-button nav-bar__arrow"></span>
+            </div>
+            <div class="nav-bar__title">我的订单</div>
+        </div>
+    </div>
+    <!--切换-->
+    <div class="order__switch" data-js="order__switch">
+        <div class="order__tabs-fixed">
+            <div class="order__tabs">
+                <!--
+                选中状态：
+                class:cur
+                data-state="selected"
+                -->
+                <a class="order__tab cur">全部</a>
+                <a class="order__tab">待付款</a>
+                <a class="order__tab">待收货</a>
+                <a class="order__tab">已完成</a>
+                <a class="order__tab">已取消</a>
+            </div>
+        </div>
+        <div class="order__content">
+            <div class="order__list">
+                <div class="order__item">
+                    <div class="order-cell">
+                        <span class="order__state-text">已完成</span>
+                        <a href="" class="order__close-button"></a>
+                    </div>
+                    <div class="shop-goods">
+                        <div class="shop-goods__left">
+                            <img src="images/shop-goods__img.jpg" alt="" class="shop-goods__img">
+                        </div>
+                        <div class="shop-goods__right">
+                            <h3 class="shop-goods__title">HAChill （哈超）时尚眼镜型号PH2016-2</h3>
+                            <p class="shop-goods__spec">颜色: PH2016-2</p>
+                            <p class="shop-goods__price">¥1,680</p>
+                        </div>
+                    </div>
+                    <div class="order-cell top-line">
+                        <p class="order-cell__text">实付款 :<span class="order-cell__total">¥<i>3600000</i></span><em class="order-cell__des">共<i>2</i>件商品</em></p>
+                    </div>
+                    <div class="order-cell top-line order-cell--flex-end">
+                        <a href="" class="order__button order__button--red">再次购买</a>
+                    </div>
+                </div>
+
+                <div class="order__item">
+                    <div class="order-cell">
+                        <span class="order__state-text">待支付</span>
+                        <a href="" class="order__close-button"></a>
+                    </div>
+                    <div class="shop-goods">
+                        <div class="shop-goods__left">
+                            <img src="images/shop-goods__img.jpg" alt="" class="shop-goods__img">
+                        </div>
+                        <div class="shop-goods__right">
+                            <h3 class="shop-goods__title">HAChill （哈超）时尚眼镜型号PH2016-2</h3>
+                            <p class="shop-goods__spec">颜色: PH2016-2</p>
+                            <p class="shop-goods__price">¥1,680</p>
+                        </div>
+                    </div>
+                    <div class="order-cell top-line">
+                        <p class="order-cell__text">实付款 :<span class="order-cell__total">¥<i>3600000</i></span><em class="order-cell__des">共<i>2</i>件商品</em></p>
+                    </div>
+                    <div class="order-cell top-line order-cell--flex-end">
+                        <a href="" class="order__button order__button--red">去支付</a>
+                    </div>
+                </div>
+
+                <div class="order__item">
+                    <div class="order-cell">
+                        <span class="order__state-text">待发货</span>
+                        <a href="" class="order__close-button"></a>
+                    </div>
+                    <div class="shop-goods">
+                        <div class="shop-goods__left">
+                            <img src="images/shop-goods__img.jpg" alt="" class="shop-goods__img">
+                        </div>
+                        <div class="shop-goods__right">
+                            <h3 class="shop-goods__title">HAChill （哈超）时尚眼镜型号PH2016-2</h3>
+                            <p class="shop-goods__spec">颜色: PH2016-2</p>
+                            <p class="shop-goods__price">¥1,680</p>
+                        </div>
+                    </div>
+                    <div class="order-cell top-line">
+                        <p class="order-cell__text">实付款 :<span class="order-cell__total">¥<i>3600000</i></span><em class="order-cell__des">共<i>2</i>件商品</em></p>
+                    </div>
+                    <div class="order-cell top-line order-cell--flex-end">
+                        <a href="" class="order__button order__button--blue">查看物流</a>
+                        <a href="" class="order__button order__button--red">再次购买</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="order__list">待付款列表</div>
+            <div class="order__list">待收货列表</div>
+            <div class="order__list">已完成列表</div>
+            <div class="order__list">已取消列表</div>
+        </div>
+    </div>
+
+</div>
+
+<!--确认窗口-->
+<!--<div class="mask"></div>
+<div class="m-confirm">
+    <div class="m-confirm__text">错过了，就没有优惠了噢，请三思！</div>
+    <div class="m-confirm__ground">
+        <a class="m-confirm__button m-confirm__button&#45;&#45;exit">取消</a>
+        <a class="m-confirm__button m-confirm__button&#45;&#45;enter">确定</a>
+    </div>
+</div>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mstab.js"></script>
+<script type="text/javascript">
+    $('[data-js="order__switch"]').mstab({
+        "event":"click",
+        "hd":".order__tabs",
+        "hdElement": "a",
+        "view": 1,
+        "cont":".order__content .order__list"
+    });
+</script>
+</body>
+</html>

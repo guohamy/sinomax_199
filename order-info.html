@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth <= 750) {
+                    docEl.style.fontSize = (clientWidth / 750 * 100).toFixed(1) + 'px';
+                }else{
+                    docEl.style.fontSize = '100px';
+                }
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <title>订单详细页</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="main-content">
+    <div class="nav-bar__block">
+        <div class="nav-bar bottom-line">
+            <div class="nav-bar__left">
+                <span class="nav-bar__back-button nav-bar__arrow"></span>
+            </div>
+            <div class="nav-bar__title">订单详情</div>
+        </div>
+    </div>
+    <!--地址-->
+    <div class="address icon-arrow__right">
+        <div class="address__row">
+            <span class="address__user-name">Lillian</span>
+            <em class="address__user-mobile">136*****415</em>
+        </div>
+        <div class="address__row">
+            <p class="address__msg icon-arrow__pos">广州市天河区林和西路3-15号耀中广场B座4209-4210室</p>
+        </div>
+    </div>
+
+    <!--商品数量-->
+    <div class="shop-goods">
+        <div class="shop-goods__left">
+            <img src="images/shop-goods__img.jpg" alt="" class="shop-goods__img">
+        </div>
+        <div class="shop-goods__right">
+            <h3 class="shop-goods__title">HAChill （哈超）时尚眼镜型号PH2016-2</h3>
+            <p class="shop-goods__spec">颜色: PH2016-2</p>
+            <p class="shop-goods__price">¥1,680 <span class="shop-goods__number">x1</span></p>
+        </div>
+    </div>
+    <div class="shop-goods">
+        <div class="shop-goods__left">
+            <img src="images/shop-goods__img.jpg" alt="" class="shop-goods__img">
+        </div>
+        <div class="shop-goods__right">
+            <h3 class="shop-goods__title">HAChill （哈超）时尚眼镜型号PH2016-2</h3>
+            <p class="shop-goods__spec">颜色: PH2016-2</p>
+            <p class="shop-goods__price">¥1,680 <span class="shop-goods__number">x1</span></p>
+        </div>
+    </div>
+    <!--
+    优惠卷：
+    data-state="voucher"   代金券
+    data-state="min"       满减券
+    data-state="discount"  折扣券
+    -->
+    <div class="shop-coupon icon-arrow__right" data-state="voucher">
+        <div class="shop-coupon__left">
+            <p class="shop-coupon__title">优惠卷</p>
+        </div>
+        <div class="shop-coupon__right">
+            <p>满<em class="shop-coupon__number">100</em>减<em class="shop-coupon__number">20</em></p>
+        </div>
+    </div>
+
+    <!--订单留言-->
+    <div class="shop-msg">
+        <div class="shop-msg__left">
+            <p class="shop-msg__title">选填</p>
+        </div>
+        <div class="shop-msg__right">
+            <input type="text" class="form__input" placeholder="给商家留言（45字以内）...">
+        </div>
+    </div>
+    <!--订单结算-->
+    <div class="accounts">
+        <div class="accounts__cell">
+            <div class="accounts__left">
+                <p class="accounts__title">商品金额</p>
+            </div>
+            <div class="accounts__right">
+                <p class="accounts__price">¥1,680</p>
+            </div>
+        </div>
+        <div class="accounts__cell">
+            <div class="accounts__left">
+                <p class="accounts__title">运费</p>
+            </div>
+            <div class="accounts__right">
+                <p class="accounts__price"><i class="accounts__symbol">+</i>¥0.00</p>
+            </div>
+        </div>
+        <div class="accounts__cell">
+            <div class="accounts__left">
+                <p class="accounts__title">优惠</p>
+            </div>
+            <div class="accounts__right">
+                <p class="accounts__price"><i class="accounts__symbol">-</i> ¥100.00</p>
+            </div>
+        </div>
+    </div>
+    <!--结算按钮-->
+    <div class="footer-nav__fixed-bar">
+        <div class="footer-nav__block top-line">
+            <div class="accounts__block">
+                <div class="accounts__left">
+                    <p class="accounts__total">实付:¥<span class="accounts__money">389.00</span></p>
+                </div>
+                <div class="accounts__right">
+                    <button class="button button--accounts">去付款</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
