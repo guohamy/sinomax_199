@@ -323,31 +323,31 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .button [data-state="accounts"] {
   width: 2.84rem;
   border-radius: 3px;
-  background-color: #f52e63; }
+  background-color: #fc4513; }
 .button [data-state="del"] {
   width: 100%;
   border-radius: 3px;
-  background-color: #f52e63; }
+  background-color: #fc4513; }
 
 .button--cart {
   background-color: #333; }
 
 .button--buy {
-  background-color: #f52e63; }
+  background-color: #fc4513; }
 
 .button--submit {
   width: 100%;
-  background-color: #f52e63; }
+  background-color: #fc4513; }
 
 .button--accounts {
   width: 2.84rem;
   border-radius: 3px;
-  background-color: #f52e63; }
+  background-color: #fc4513; }
 
 .button--del, .button--payment {
   width: 100%;
   border-radius: 3px;
-  background-color: #f52e63; }
+  background-color: #fc4513; }
 
 .button-stepper {
   float: right;
@@ -446,7 +446,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   color: #222222;
   border: 1px solid; }
   .tags.cur, .tags[data-state="selected"] {
-    color: #f52e63; }
+    color: #fc4513; }
 
 .product-win {
   -webkit-box-sizing: border-box;
@@ -504,7 +504,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .product-attr__title {
   padding-top: 0.3rem;
   font-size: 0.38rem;
-  color: #f52e63;
+  color: #fc4513;
   font-weight: 400;
   line-height: 1.5; }
 
@@ -637,9 +637,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   margin: 0; }
 
 .van-switch--on {
-  background-color: #f52e63; }
+  background-color: #fc4513; }
   .van-switch--on::after {
-    border-color: #f52e63; }
+    border-color: #fc4513; }
   .van-switch--on .van-switch__node {
     -webkit-transform: translateX(21px);
     transform: translateX(21px); }
@@ -701,7 +701,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     -webkit-transition: width 0.3s linear, background-color 0.3s linear;
     transition: width 0.3s linear, background-color 0.3s linear; }
     .m-swipe .m-nav__item.cur {
-      background-color: #f52e63; }
+      background-color: #fc4513; }
 
 .icon-arrow__pos {
   position: relative;
@@ -907,9 +907,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     height: 0.06rem;
     background-color: transparent; }
   .order__tab.cur, .order__tab[data-state="selected"] {
-    color: #f52e63; }
+    color: #fc4513; }
   .order__tab.cur:before, .order__tab[data-state="selected"]:before {
-    background-color: #f52e63; }
+    background-color: #fc4513; }
 
 .order__content {
   padding-top: 1.13rem; }
@@ -967,7 +967,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   border: 1px solid; }
 
 .order__button--red {
-  color: #f52e63; }
+  color: #fc4513; }
 
 .order__button--blue {
   margin-right: 0.2rem;
@@ -1074,7 +1074,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .shop-goods__price {
   position: relative;
   margin-top: 0.3rem;
-  color: #f52e63;
+  color: #fc4513;
   font-size: 0.32rem; }
 
 .shop-goods__number {
@@ -1127,7 +1127,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -ms-flex-item-align: center;
   align-self: center;
   font-size: 0.26rem;
-  color: #f52e63; }
+  color: #fc4513; }
 
 .shop-coupon__title {
   font-size: 0.28rem;
@@ -1206,7 +1206,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .accounts__total {
   padding-right: 0.3rem;
   font-size: 0.3rem;
-  color: #f52e63; }
+  color: #fc4513; }
 
 .accounts__cell {
   display: -webkit-box;
@@ -1230,7 +1230,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .accounts__price {
   font-size: 0.24rem;
-  color: #f52e63; }
+  color: #fc4513; }
 
 .accounts__symbol {
   padding: 0 2px;
@@ -1299,14 +1299,14 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   padding: 0 15px;
   font-size: 0.24rem;
   line-height: 1.6;
-  color: #f52e63; }
+  color: #fc4513; }
 
 .shop-about__price {
   margin-bottom: 0.1rem;
   padding: 0 15px;
   font-size: 0.48rem;
   line-height: 2;
-  color: #f52e63; }
+  color: #fc4513; }
 
 .shop-about__figure {
   -webkit-box-sizing: border-box;
@@ -1350,7 +1350,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   padding-right: 0.35rem;
   height: 0.4rem;
   line-height: 0.4rem;
-  color: #f52e63;
+  color: #fc4513;
   font-style: normal;
   font-size: 0.24rem;
   background: url(../images/icon-video.png) no-repeat 100% 50%;
@@ -1382,7 +1382,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   color: #333333; }
 
 .shop-about__selected {
-  color: #f52e63;
+  color: #fc4513;
   font-size: 0.28rem; }
 
 .shop-about__cell {
@@ -1659,7 +1659,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .payment-cell__total {
   font-size: 0.28rem;
-  color: #f52e63; }
+  color: #fc4513; }
 
 .payment-cell__title {
   margin-right: auto;
@@ -1688,7 +1688,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .payment-success-page {
   background-color: #fff; }
   .payment-success-page .nav-bar__text {
-    color: #f52e63;
+    color: #fc4513;
     font-size: 0.36rem; }
 
 .payment__success-content {
@@ -1705,7 +1705,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .payment__success-text {
   font-size: 0.32rem;
   line-height: 2;
-  color: #f52e63; }
+  color: #fc4513; }
 
 .payment__success-items {
   margin-bottom: 2.5rem; }
@@ -1724,7 +1724,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     margin-bottom: 0.2rem;
     height: 0.84rem; }
   .payment__success-cell:last-child .success-cell__text {
-    color: #f52e63; }
+    color: #fc4513; }
 
 .success-cell__title, .success-cell__text {
   font-size: 0.28rem; }
@@ -1745,7 +1745,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   width: 3.4rem;
   height: 0.8rem;
   line-height: 0.8rem;
-  color: #f52e63;
+  color: #fc4513;
   text-align: center;
   font-size: 0.32rem;
   border: 1px solid;
@@ -1875,7 +1875,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   line-height: 0.46rem;
   text-align: center;
   border-radius: 1em;
-  color: #f52e63;
+  color: #fc4513;
   font-size: 0.26rem;
   border: 1px solid; }
   .coupon__state-button[data-state="overdue"] {
@@ -1910,7 +1910,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   display: block;
   height: 1rem;
   line-height: 1rem;
-  color: #f52e63;
+  color: #fc4513;
   text-align: center;
   font-size: 0.32rem; }
   .address__add-button:after {
@@ -1971,7 +1971,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   color: #666666; }
 
 .m-confirm__button--enter {
-  color: #f52e63; }
+  color: #fc4513; }
 
 /*弹出层容器*/
 .popup-page-wrap .popup-mask {
