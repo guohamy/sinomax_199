@@ -34,37 +34,24 @@
             <div class="nav-bar__left">
                 <span class="nav-bar__back-button nav-bar__arrow"></span>
             </div>
-            <div class="nav-bar__title">订单详情</div>
+            <div class="nav-bar__title">商品详情</div>
             <div class="nav-bar__right">
                 <a class="nav-bar__text icon-arrow__share">分享</a>
             </div>
         </div>
     </div>
 
-    <!--幻灯片-->
-    <div data-js="swipe-box" class="m-swipe">
-        <div class="swipe-wrap">
-            <div class="swipe-item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="images/shop-goods__img.jpg" alt="">
-            </div>
-            <div class="swipe-item">
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="images/img.png" alt="">
-            </div>
-        </div>
+    <!--头图 购物车为空时 shop-cart 添加class empty-->
+    <div class="shop-image">
+        <img src="./images/shop.jpg" alt="">
+        <a href="" class="shop-cart"><b>12</b></a>
     </div>
 
     <!--商品信息-->
     <div class="shop-about">
-        <h2 class="shop-about__title">HAChill for PH2016-2</h2>
-        <p class="shop-about__des">Sun in sky 指定合作高端眼镜品牌</p>
+        <h2 class="shop-about__title">水晶蝴蝶结羊毛夹克</h2>
         <p class="shop-about__price">¥1,680</p>
-        <a class="shop-about__figure">
-            <i class="shop-about__figure-img" style="background-image: url(images/av.png)"></i>
-            <span class="shop-about__figure-name">邓紫棋</span>
-            <span class="shop-about__figure-des">HACHill代言人</span>
-            <em class="shop-about__figure-video">边看边买</em>
-        </a>
-        <ul class="shop-about__tags">
+        <ul class="shop-about__tags top-line">
             <li class="shop-about__tag">包邮</li>
             <li class="shop-about__tag">七天无理由退款</li>
             <li class="shop-about__tag">正品保障</li>
@@ -83,30 +70,6 @@
             <div class="shop-about__cell-left">送至</div>
             <div class="shop-about__cell-right"><p class="address__msg icon-arrow__pos">广州市天河区林和西路3-15号耀中广场B座4209-4210室</p></div>
         </div>
-        <div class="shop-about__cell shop-about__cell--postage">
-            <div class="shop-about__cell-left">邮费</div>
-            <div class="shop-about__cell-right">包邮</div>
-        </div>
-    </div>
-
-    <!--店铺信息-->
-    <div class="m-store">
-        <div class="m-store__head">
-            <img class="m-store__logo" src="images/shop-logo.png" alt="">
-            <h3 class="m-store__title">HAChill官方旗舰店</h3>
-            <p class="m-store__des">哈超席卷中国南区</p>
-        </div>
-        <div class="m-store__body">
-            <div class="m-store__box">
-                <p class="m-store__box-title">2998</p>
-                <p class="m-store__box-des">关注人数</p>
-            </div>
-            <div class="m-store__box">
-                <p class="m-store__box-title">9.1万</p>
-                <p class="m-store__box-des">商品数</p>
-            </div>
-        </div>
-        <a href="" class="m-store__button">进入店铺</a>
     </div>
 
     <!--商品图片信息-->
@@ -127,18 +90,6 @@
     <div class="footer-nav__fixed-bar">
         <div class="footer-nav__block top-line">
             <div class="shop-info__block">
-                <a href="" class="shop-info__btn">
-                    <i class="shop-info__btn-icon shop-info__btn-icon--shop"></i>
-                    <span class="shop-info__btn-text">店铺</span>
-                </a>
-                <a href="" class="shop-info__btn">
-                    <i class="shop-info__btn-icon shop-info__btn-icon--like"></i>
-                    <span class="shop-info__btn-text">关注</span>
-                </a>
-                <a href="" class="shop-info__btn">
-                    <i class="shop-info__btn-icon shop-info__btn-icon--cart"></i>
-                    <span class="shop-info__btn-text">购物车</span>
-                </a>
                 <button class="button button--cart" data-js="button--cart">加入购物车</button>
                 <button class="button button--buy">立即购买</button>
             </div>

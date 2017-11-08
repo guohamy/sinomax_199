@@ -14,7 +14,7 @@ input {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
-    font-size: 0.32rem;
+    font-size: 0.3rem;
     text-align: center;
     height: 0.84rem;
     line-height: 0.84rem;
@@ -352,6 +352,10 @@ input {
     width: 70px;
     -ms-flex-item-align: center;
     align-self: center;
+
+    &.form__cell-start {
+        align-self: flex-start;
+    }
 }
 
 .form__cell--switch {
@@ -380,7 +384,7 @@ input {
     color: #333333;
 }
 
-.form__input {
+.form__input, .form__textarea {
     display: block;
     padding: 0;
     width: 100%;
@@ -390,6 +394,12 @@ input {
     &:focus {
         outline: 1px solid transparent;
     }
+}
+
+.form__textarea {
+    height: 52px;
+    padding: 2px 0;
+    resize: none;
 }
 
 .form__cell-tips {
@@ -616,6 +626,11 @@ input {
     padding-bottom: 1.03rem;
     max-width: 8rem;
     min-height: 100vh;
+
+    &.main-myself {
+        padding-top: 0;
+        background-color: #f7f7f7;
+    }
 }
 
 /*顶部*/
@@ -1233,7 +1248,7 @@ input {
 .shop-about__title {
     padding: 0 15px;
     font-size: 0.32rem;
-    line-height: 1.5;
+    line-height: 1.25;
     font-weight: 400;
     color: #333333;
 }
@@ -1308,11 +1323,7 @@ input {
 
 .shop-about__tags {
     padding: 0.25rem 15px;
-    &:after {
-        content: '';
-        display: table;
-        clear: both;
-    }
+    overflow: hidden;
 }
 
 .shop-about__tag {
@@ -1391,6 +1402,7 @@ input {
 
 .shop-about__cell-right {
     width: 100%;
+    color: $primaryColor;
 }
 
 .shop-about__postage-text {
@@ -1510,10 +1522,76 @@ input {
     color: #999999;
 }
 
+.shop-image {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    img {
+        max-width: 4.95rem;
+        max-height: 80%;
+    }
+
+    .shop-cart {
+        display: block;
+        width: 0.76rem;
+        height: 0.76rem;
+        border-radius: 50%;
+        background-color: #000;
+        position: absolute;
+        top: 0.6rem;
+        right: 0.4rem;
+
+        &.empty {
+            b {
+                text-indent: -9999px;
+            }
+        }
+
+        b {
+            position: absolute;
+            right: 0.1rem;
+            top: 0.14rem;
+            font-size: 0.12rem;
+            color: #fff;
+            line-height: 0.24rem;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/icon-wcart.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 0.41rem auto;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &:not(.empty):after {
+            content: '';
+            width: 0.24rem;
+            height: 0.24rem;
+            background-color: #ec3932;
+            border-radius: 50%;
+            position: absolute;
+            right: 0.1rem;
+            top: 0.14rem;
+            z-index: 1;
+        }
+    }
+}
+
 /*商品详细图片*/
 
 .shop-picture {
-    margin-top: 0.28rem;
+    border-top: 0.28rem #f7f7f7 solid;
     padding-bottom: 0.2rem;
     background-color: #fff;
 }
@@ -1542,11 +1620,11 @@ input {
     width: 100%;
     padding: 0.1rem 0.3rem;
     .button--cart {
-        width: 55%;
+        width: 50%;
         border-radius: 2px 0 0 2px;
     }
     .button--buy {
-        width: 45%;
+        width: 50%;
         border-radius: 0 2px 2px 0;
     }
 }
@@ -1978,6 +2056,127 @@ input {
         height: 1px;
         width: 100%;
         border-top: 1px solid #D9D9D9;
+    }
+}
+
+//个人页面
+.myself___header {
+    height: 4.45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/bg-header.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    i {
+        width: 1.38rem;
+        height: 1.38rem;
+        border-radius: 50%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 0.1rem;
+    }
+
+    p {
+        font-size: 0.34rem;
+        line-height: 0.7rem;
+        color: #fff;
+    }
+
+    a {
+        font-size: 0.24rem;
+        color: #fff;
+        line-height: 0.34rem;
+        padding: 0 0.18rem;
+        border: 1px #fff solid;
+        border-radius: 0.04rem;
+    }
+}
+
+.myself__tab {
+    height: 1.15rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../images/bg-tab.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 10%;
+
+    .myself__tab-line {
+        background-color: rgba(247,247,247,0.2);
+        width: 1px;
+        height: 0.68rem;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    .myself__tab-item {
+        font-size: 0.34rem;
+        line-height: 0.42rem;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+            font-size: 0.28rem;
+        }
+    }
+}
+
+.myself__link {
+
+    a {
+        display: flex;
+        background-color: #fff;
+        font-size: 0.3rem;
+        color: #000;
+        line-height: 1rem;
+        padding: 0 0.28rem;
+        position: relative;
+
+        &.myself__link-mb28 {
+            margin-bottom: 0.28rem;
+        }
+
+        &.myself__link-bottom-border {
+
+            &:after {
+                content: '';
+                width: 92.6%;
+                position: absolute;
+                left: 3.7%;
+                bottom: 0;
+                height: 1px;
+                background-color: #e5e5e5;
+            }
+        }
+
+        span {
+            height: 1rem;
+            padding-left: 0.5rem;
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: 0.31rem auto;
+            
+            &.icon-indent {
+                background-image: url(../images/icon-indent.png);
+            }
+
+            &.icon-cardbag {
+                background-image: url(../images/icon-cardbag.png);
+            }
+
+            &.icon-approve {
+                background-image: url(../images/icon-approve.png);
+            }
+        }
     }
 }
 
