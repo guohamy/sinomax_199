@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth <= 750) {
+                    docEl.style.fontSize = (clientWidth / 750 * 100).toFixed(1) + 'px';
+                }else{
+                    docEl.style.fontSize = '100px';
+                }
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<div class="main-content">
+
+    <div class="nav-bar__block">
+        <div class="nav-bar bottom-line">
+            <div class="nav-bar__left">
+                <span class="icon-user"></span>
+            </div>
+            <div class="nav-bar__title"><span class="icon-biggar"></span> </div>
+        </div>
+    </div>
+
+    <div class="clothing-block">
+        <div class="clothing-header">特惠秒杀</div>
+        <div class="clothing-items">
+            <div class="clothing-item">
+                <div class="clothing-image">
+                    <img src="./images/shop.jpg" alt="">
+                </div>
+                <p class="clothing-name">水晶蝴蝶结羊毛衫</p>
+                <div class="clothing-prize">¥1,680</div>
+            </div>
+            <div class="clothing-item">
+                <div class="clothing-image">
+                    <img src="./images/shop-goods__img.jpg" alt="">
+                </div>
+                <p class="clothing-name">水晶蝴蝶结羊毛衫</p>
+                <div class="clothing-prize">¥1,680</div>
+            </div>
+            <div class="clothing-item">
+                <div class="clothing-image">
+                    <img src="./images/img.png" alt="">
+                </div>
+                <p class="clothing-name">水晶蝴蝶结羊毛衫</p>
+                <div class="clothing-prize">¥1,680</div>
+            </div>
+            <div class="clothing-item">
+                <div class="clothing-image">
+                    <img src="./images/shop.jpg" alt="">
+                </div>
+                <p class="clothing-name">水晶蝴蝶结羊毛衫</p>
+                <div class="clothing-prize">¥1,680</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clothing-block">
+        <div class="clothing-header">全部商品</div>
+        <div class="clothing-items">
+            <div class="clothing-item">
+                <div class="clothing-image">
+                    <img src="./images/shop.jpg" alt="">
+                </div>
+                <p class="clothing-name">水晶蝴蝶结羊毛衫</p>
+                <div class="clothing-prize">¥1,680</div>
+            </div>
+            <div class="clothing-item">
+                <div class="clothing-image">
+                    <img src="./images/shop.jpg" alt="">
+                </div>
+                <p class="clothing-name">水晶蝴蝶结羊毛衫</p>
+                <div class="clothing-prize">¥1,680</div>
+            </div>
+            <div class="clothing-item">
+                <div class="clothing-image">
+                    <img src="./images/shop.jpg" alt="">
+                </div>
+                <p class="clothing-name">水晶蝴蝶结羊毛衫</p>
+                <div class="clothing-prize">¥1,680</div>
+            </div>
+            <div class="clothing-item">
+                <div class="clothing-image">
+                    <img src="./images/shop.jpg" alt="">
+                </div>
+                <p class="clothing-name">水晶蝴蝶结羊毛衫</p>
+                <div class="clothing-prize">¥1,680</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer-nav__fixed-bar">
+        <div class="footer-nav__block top-line">
+            <div class="accounts__block" data-state="accounts">
+                <div class="accounts__left">
+                    <span class="icon-cart"></span>
+                    <p class="accounts__total">合计:¥<span class="accounts__money">389.00</span></p>
+                </div>
+                <div class="accounts__right">
+                    <button class="button button--accounts">去结算</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
