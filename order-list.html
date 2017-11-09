@@ -40,23 +40,9 @@
     </div>
     <!--切换-->
     <div class="order__switch" data-js="order__switch">
-        <div class="order__tabs-fixed">
-            <div class="order__tabs">
-                <!--
-                选中状态：
-                class:cur
-                data-state="selected"
-                -->
-                <a class="order__tab cur">全部</a>
-                <a class="order__tab">待付款</a>
-                <a class="order__tab">待收货</a>
-                <a class="order__tab">已完成</a>
-                <a class="order__tab">已取消</a>
-            </div>
-        </div>
         <div class="order__content">
             <div class="order__list">
-                <div class="order__item">
+                <div class="order__item border-bottom">
                     <div class="order-cell">
                         <span class="order__state-text">已完成</span>
                         <a href="" class="order__close-button"></a>
@@ -79,7 +65,7 @@
                     </div>
                 </div>
 
-                <div class="order__item">
+                <div class="order__item border-bottom">
                     <div class="order-cell">
                         <span class="order__state-text">待支付</span>
                         <a href="" class="order__close-button"></a>
@@ -102,7 +88,7 @@
                     </div>
                 </div>
 
-                <div class="order__item">
+                <div class="order__item border-bottom">
                     <div class="order-cell">
                         <span class="order__state-text">待发货</span>
                         <a href="" class="order__close-button"></a>
@@ -127,10 +113,6 @@
                 </div>
 
             </div>
-            <div class="order__list">待付款列表</div>
-            <div class="order__list">待收货列表</div>
-            <div class="order__list">已完成列表</div>
-            <div class="order__list">已取消列表</div>
         </div>
     </div>
 

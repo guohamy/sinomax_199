@@ -791,6 +791,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   padding-bottom: 1.03rem;
   max-width: 8rem;
   min-height: 100vh; }
+  .main-content[data-theme="grey"] {
+    background-color: #f7f7f7; }
   .main-content.main-myself {
     padding-top: 0;
     background-color: #f7f7f7; }
@@ -990,9 +992,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   .order__tab.cur:before, .order__tab[data-state="selected"]:before {
     background-color: #ec3932; }
 
-.order__content {
-  padding-top: 1.13rem; }
-
 .order__list {
   display: none;
   font-size: 16px; }
@@ -1096,7 +1095,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   padding-left: 0.3rem;
-  background-color: #fff; }
+  background-color: #fff;
+  border-bottom: 0.28rem #f7f7f7 solid; }
 
 .address__row {
   padding: 0.1rem 0;
@@ -1127,6 +1127,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   margin-top: 0.28rem;
   padding: 0.38rem 0.3rem;
   background-color: #fff; }
+
+.border-bottom {
+  border-bottom: 0.28rem #f7f7f7 solid; }
 
 .shop-goods__left {
   width: 2.34rem;
@@ -1174,13 +1177,13 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
-  margin-top: 0.28rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0.22rem 0.3rem;
   min-height: 0.83rem;
-  background-color: #fff; }
+  background-color: #fff;
+  border-bottom: 0.28rem #f7f7f7 solid; }
   .shop-coupon[data-state="voucher"]:after, .shop-coupon[data-state="min"]:after, .shop-coupon[data-state="discount"]:after {
     content: '';
     position: absolute;
@@ -1229,10 +1232,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 0.28rem;
   padding: 0.22rem 0.3rem;
   min-height: 0.83rem;
-  background-color: #fff; }
+  background-color: #fff;
+  border-bottom: 0.28rem #f7f7f7 solid; }
 
 .shop-msg__left {
   width: 1rem;
@@ -1964,6 +1967,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .win-mod {
   position: relative;
   background-color: #fff; }
+  .win-mod.win-max {
+    height: 100%;
+    overflow: auto; }
 
 .win-mod--address .win-mod__body {
   background-color: #fff; }
@@ -2343,5 +2349,41 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   transform: translate3d(0, 0, 0); }
 .popup-page .popup-content {
   height: auto; }
+
+.win-modal {
+  width: 4.44rem;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -2.22rem;
+  margin-top: -1.22rem;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 13; }
+  .win-modal[data-show=true] {
+    opacity: 1;
+    visibility: visible; }
+  .win-modal .modal-body {
+    font-size: 0.28rem;
+    line-height: 0.38rem;
+    color: #000;
+    padding: 0.55rem 0.4rem 0.27rem; }
+  .win-modal .modal-footer {
+    text-align: right;
+    padding: 0 0.4rem 0.23rem; }
+    .win-modal .modal-footer button {
+      font-size: 0.32rem;
+      line-height: 2; }
+      .win-modal .modal-footer button.modal-button-inline {
+        border: none;
+        background-color: transparent; }
+        .win-modal .modal-footer button.modal-button-inline:focus {
+          outline: none; }
+        .win-modal .modal-footer button.modal-button-inline.button-cancel {
+          color: #666666; }
+        .win-modal .modal-footer button.modal-button-inline.button-sure {
+          color: #fc4513; }
 
 /*# sourceMappingURL=index.css.map */

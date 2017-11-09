@@ -32,7 +32,7 @@
     <div class="nav-bar__block">
         <div class="nav-bar bottom-line">
             <div class="nav-bar__left">
-                <span class="nav-bar__back-button nav-bar__arrow"></span>
+                <span class="nav-bar__back-button nav-bar__arrow" data-js="button--modal"></span>
             </div>
             <div class="nav-bar__title">订单详情</div>
         </div>
@@ -43,13 +43,17 @@
             <span class="address__user-name">Lillian</span>
             <em class="address__user-mobile">136*****415</em>
         </div>
+        <div class="shop-about__checkbox">
+            <span>自提</span>
+            <span data-state="selected">快递</span>
+        </div>
         <div class="address__row">
             <p class="address__msg icon-arrow__pos">广州市天河区林和西路3-15号耀中广场B座4209-4210室</p>
         </div>
     </div>
 
     <!--商品数量-->
-    <div class="shop-goods">
+    <div class="shop-goods border-bottom">
         <div class="shop-goods__left">
             <img src="images/shop-goods__img.jpg" alt="" class="shop-goods__img">
         </div>
@@ -59,7 +63,7 @@
             <p class="shop-goods__price">¥1,680 <span class="shop-goods__number">x1</span></p>
         </div>
     </div>
-    <div class="shop-goods">
+    <div class="shop-goods border-bottom">
         <div class="shop-goods__left">
             <img src="images/shop-goods__img.jpg" alt="" class="shop-goods__img">
         </div>
@@ -134,5 +138,60 @@
         </div>
     </div>
 </div>
+
+<div class="popup-page-wrap">
+    <div class="popup-mask" data-show="false"></div>
+    <div class="popup-page win-modal" data-show="false">
+        <div class="modal-body">
+            错过了，就没有优惠了噢，请三思！
+        </div>
+        <div class="modal-footer">
+            <button class="modal-button-inline button-cancel">取消</button>
+            <button class="modal-button-inline button-sure">确定</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+    var $pop = {
+        $winType:null,
+        $mask: $('.popup-mask'),
+        $popup_page: $('.popup-page'),
+        $modalWin:$('.win-modal'),
+        show: function (type) {
+            this.$mask.attr('data-show', 'true');
+            if(typeof this[type] !== null && this[type] !== 'undefined'){
+                this[type].attr('data-show', 'true');
+                this.$winType = this[type];
+            }
+        },
+        hide: function () {
+            this.$mask.attr('data-show', 'false');
+            if(this.$winType){
+                this.$winType.attr('data-show', 'false');
+            }
+        },
+        bind: function () {
+            var me = this;
+            this.$mask.on('click', function (e) {
+                me.hide();
+            })
+        },
+        init: function () {
+            this.bind();
+        }
+    };
+
+    $pop.init();
+
+    $('[data-js="button--modal"]').on('click', function (e) {
+        $pop.show('$modalWin');
+    });
+
+    $('.button-cancel').on('click', function (e) {
+        $pop.hide();
+    })
+</script>
 </body>
 </html>

@@ -630,6 +630,10 @@ input {
     max-width: 8rem;
     min-height: 100vh;
 
+    &[data-theme="grey"]{
+        background-color: #f7f7f7;
+    }
+
     &.main-myself {
         padding-top: 0;
         background-color: #f7f7f7;
@@ -873,7 +877,6 @@ input {
 }
 
 .order__content {
-    padding-top: 1.13rem;
 }
 
 .order__list {
@@ -1000,6 +1003,7 @@ input {
     padding-bottom: 0.2rem;
     padding-left: 0.3rem;
     background-color: #fff;
+    border-bottom: 0.28rem #f7f7f7 solid;
 }
 
 .address__row {
@@ -1037,6 +1041,10 @@ input {
     padding: 0.38rem 0.3rem;
     background-color: #fff;
 }
+
+.border-bottom{
+     border-bottom: 0.28rem #f7f7f7 solid;
+ }
 
 .shop-goods__left {
     width: 2.34rem;
@@ -1092,13 +1100,14 @@ input {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
-    margin-top: 0.28rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 0.22rem 0.3rem;
     min-height: 0.83rem;
     background-color: #fff;
+    border-bottom: 0.28rem #f7f7f7 solid;
+
     &[data-state="voucher"]:after, &[data-state="min"]:after, &[data-state="discount"]:after {
         content: '';
         position: absolute;
@@ -1157,10 +1166,10 @@ input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 0.28rem;
     padding: 0.22rem 0.3rem;
     min-height: 0.83rem;
     background-color: #fff;
+    border-bottom: 0.28rem #f7f7f7 solid;
 }
 
 .shop-msg__left {
@@ -2054,6 +2063,11 @@ input {
 .win-mod {
     position: relative;
     background-color: #fff;
+
+    &.win-max {
+        height: 100%;
+        overflow: auto;
+    }
 }
 
 .win-mod--address .win-mod__body {
@@ -2521,5 +2535,58 @@ input {
     }
     .popup-content {
         height: auto;
+    }
+}
+
+.win-modal {
+    width: 4.44rem;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -2.22rem;
+    margin-top: -1.22rem;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 13;
+
+    &[data-show=true] {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-body {
+        font-size: 0.28rem;
+        line-height: 0.38rem;
+        color: #000;
+        padding: 0.55rem 0.4rem 0.27rem;
+    }
+
+    .modal-footer {
+        text-align: right;
+        padding: 0 0.4rem 0.23rem;
+
+        button {
+            font-size: 0.32rem;
+            line-height: 2;
+
+            &.modal-button-inline {
+                border: none;
+                background-color: transparent;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &.button-cancel {
+                    color: #666666;
+                }
+
+                &.button-sure {
+                    color: #fc4513;
+                }
+            }
+        }
     }
 }
