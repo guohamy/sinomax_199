@@ -335,6 +335,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .button--buy {
   background-color: #fc4513; }
 
+.button--unBuy {
+  background-color: #c0c0c0; }
+
 .button--submit {
   width: 100%;
   background-color: #fc4513; }
@@ -442,7 +445,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   line-height: 0.5rem;
   font-size: 0.26rem;
   text-align: center;
-  border-radius: 3px;
   color: #222222;
   border: 1px solid; }
   .tags.cur, .tags[data-state="selected"] {
@@ -1421,7 +1423,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   align-items: flex-start; }
   .shop-about__cell--address .address__msg {
     padding-right: 0;
-    color: #333333; }
+    color: #333333;
+    margin-right: 0.3rem; }
 
 .shop-about__cell--postage {
   padding-bottom: 0.2rem;
@@ -1431,12 +1434,36 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .shop-about__cell-left {
   font-size: 0.28rem;
-  width: 1rem;
-  color: #666666; }
+  color: #666666;
+  flex-shrink: 0;
+  margin-right: 0.32rem; }
 
 .shop-about__cell-right {
   width: 100%;
   color: #fc4513; }
+
+.shop-about__checkbox {
+  display: flex; }
+  .shop-about__checkbox span {
+    position: relative;
+    padding-left: 0.42rem;
+    color: #333333;
+    font-size: 0.28rem;
+    margin-right: 0.32rem; }
+    .shop-about__checkbox span:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -0.13rem;
+      width: 0.26rem;
+      height: 0.26rem;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-image: url(../images/icon__radio-default.png); }
+    .shop-about__checkbox span.cur:before, .shop-about__checkbox span[data-state="selected"]:before {
+      background-image: url(../images/icon__radio-selected.png); }
 
 .shop-about__postage-text {
   font-size: 0.28rem;
@@ -1611,12 +1638,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   display: flex;
   width: 100%;
   padding: 0.1rem 0.3rem; }
-  .shop-info__block .button--cart {
+  .shop-info__block .button {
     width: 50%;
     border-radius: 2px 0 0 2px; }
-  .shop-info__block .button--buy {
-    width: 50%;
-    border-radius: 0 2px 2px 0; }
 
 .shop-info__btn {
   margin-right: 0.28rem;
@@ -1825,6 +1849,20 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .win-mod--address .win-mod__body {
   background-color: #fff; }
+  .win-mod--address .win-mod__body.win-mode__body-empty {
+    background-image: url(../images/address-none.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 1.29rem auto; }
+    .win-mod--address .win-mod__body.win-mode__body-empty:before {
+      content: '快去新增地址哦~';
+      position: absolute;
+      font-size: 0.28rem;
+      line-height: 1;
+      color: #999999;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, 1.17rem); }
 
 .win-mod__head {
   position: relative;
@@ -1950,7 +1988,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     content: '';
     position: absolute;
     top: 0.15rem;
-    right: 0;
+    left: 0;
     width: 0.3rem;
     height: 0.3rem;
     background-repeat: no-repeat;
@@ -1963,6 +2001,17 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     text-indent: 0;
     padding-left: 0.5rem;
     padding-right: 0.5rem; }
+  .address-cell .address__remove {
+    display: block;
+    width: 0.28rem;
+    height: 0.28rem;
+    background-image: url(../images/icon-remove.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 0.1rem; }
 
 .address__add-button {
   position: relative;
