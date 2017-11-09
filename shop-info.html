@@ -85,13 +85,13 @@
     <div class="shop-picture">
         <div class="shop-picture__title">商品详情</div>
         <div class="shop-picture__box">
-            <img class="lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="images/img.png" alt="">
+            <img class="lazy-load" src="images/default.png" data-original="images/img.png" alt="">
         </div>
         <div class="shop-picture__box">
-            <img class="lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="images/img.png" alt="">
+            <img class="lazy-load" src="images/default.png" data-original="images/img.png" alt="">
         </div>
         <div class="shop-picture__box">
-            <img class="lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="images/img.png" alt="">
+            <img class="lazy-load" src="images/default.png" data-original="images/img.png" alt="">
         </div>
     </div>
 
@@ -300,6 +300,7 @@
         $stepperObject.val($stepperObjectVal + 1);
     });
 
+    $('.lazy-load').lazyload({effect: "fadeIn"});
 </script>
 </body>
 </html>

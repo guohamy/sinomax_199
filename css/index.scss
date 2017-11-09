@@ -650,6 +650,10 @@ input {
     user-select: none;
     text-align: center;
     background-color: #fff;
+
+    &.nav-black {
+        background-color: #000;
+    }
 }
 
 .nav-bar__block {
@@ -694,6 +698,27 @@ input {
     font-size: 0.36rem;
 }
 
+.nav-bar__user {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background-image: url(../images/icon-user.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 0.42rem auto;
+}
+
+.nav-bar__logo {
+    display: block;
+    margin: 0 auto;
+    width: 1.26rem;
+    height: 1rem;
+    background-image: url(../images/icon-biggar.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 1.26rem auto;
+}
+
 .nav-bar__text {
     display: block;
     padding-left: 0.3rem;
@@ -733,6 +758,67 @@ input {
     margin: 0 auto;
     max-width: 8rem;
     background-color: #fff;
+}
+
+/*
+ * 线下服装
+ */
+.clothing-block {
+    padding-top: 0.48rem;
+
+    .clothing-header {
+        width: 3.15rem;
+        height: 0.88rem;
+        line-height: 0.88rem;
+        background-image: url(../images/icon-border.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 0.42rem;
+        color: #000;
+        text-align: center;
+        margin: 0 auto 0.2rem;
+    }
+
+    .clothing-items {
+        overflow: hidden;
+
+        .clothing-item {
+            width: 33.3333%;
+            float: left;
+            padding: 0.2rem 0.2rem;
+
+            .clothing-image {
+                height: 2.3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-width: 80%;
+                    max-height: 80%;
+                }
+            }
+
+            .clothing-name {
+                font-size: 0.28rem;
+                line-height: 1;
+                color: #333333;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-align: center;
+                margin-bottom: 0.2rem;
+            }
+
+            .clothing-prize {
+                font-size: 0.34rem;
+                line-height: 1;
+                color: #fc4513;
+                text-align: center;
+            }
+        }
+    }
 }
 
 /*订单列表*/
@@ -1123,6 +1209,66 @@ input {
         flex: 1;
         margin-right: auto;
         text-align: right;
+
+        &.just-left {
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &[data-type="flex"] {
+            display: flex;
+        }
+
+        .icon-cart {
+            width: 0.76rem;
+            height: 0.76rem;
+            border-radius: 50%;
+            background-color: #000;
+            position: relative;
+            margin-right: 0.34rem;
+
+            &.empty {
+                b {
+                    text-indent: -9999px;
+                }
+            }
+
+            b {
+                position: absolute;
+                right: 0.1rem;
+                top: 0.14rem;
+                font-size: 0.12rem;
+                color: #fff;
+                line-height: 0.24rem;
+                z-index: 2;
+                overflow: hidden;
+            }
+
+            &:before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-image: url(../images/icon-wcart.png);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 0.41rem auto;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            &:not(.empty):after {
+                content: '';
+                width: 0.24rem;
+                height: 0.24rem;
+                background-color: #ec3932;
+                border-radius: 50%;
+                position: absolute;
+                right: 0.1rem;
+                top: 0.14rem;
+                z-index: 1;
+            }
+        }
     }
     &[data-state="accounts"] {
         .button--accounts {
