@@ -683,6 +683,21 @@ input {
     position: fixed;
 }
 
+.nav-bar__whole {
+    background-color: #fc4513;
+    font-size: 0.3rem;
+    color: #fff;
+    padding-left: 0.28rem;
+    display: flex;
+    align-items: center;
+    height: 1rem;
+
+    span {
+        font-size: 0.42rem;
+        margin-left: 0.28rem;
+    }
+}
+
 .nav-bar__left {
     position: absolute;
     left: 0;
@@ -898,9 +913,17 @@ input {
 .order__item {
     margin-bottom: 0.28rem;
     background-color: #fff;
+
+    &.order-mt28 {
+        margin-top: 0.28rem;
+    }
     .shop-goods {
         margin-top: 0;
         padding: 0 15px 0.2rem;
+
+        &.goods-pd28 {
+            padding-top: 0.28rem;
+        }
     }
     .shop-goods__price {
         color: #333333;
@@ -972,6 +995,26 @@ input {
     font-size: initial;
 }
 
+.order-header {
+    display: flex;
+    align-items: center;
+    height: 0.82rem;
+    color: #666;
+    font-size: 0.28rem;
+    padding: 0 0.3rem;
+
+    span {
+        margin: 0 0.18rem 0 0;
+    }
+}
+
+.order-number {
+    font-size: 0.24rem;
+    line-height: 0.72rem;
+    color: #999;
+    margin-left: 0.28rem;
+}
+
 .order-cell--flex-end {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
@@ -981,6 +1024,17 @@ input {
 .order-cell__text {
     font-size: 0.28rem;
     color: #333333;
+
+    &.text-right {
+        width: 100%;
+        text-align: right;
+
+        strong {
+            color: #fc4513;
+            font-size: 0.48rem;
+            font-weight: normal;
+        }
+    }
 }
 
 .order-cell__total {

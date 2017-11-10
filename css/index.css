@@ -832,6 +832,18 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   width: 100%;
   position: fixed; }
 
+.nav-bar__whole {
+  background-color: #fc4513;
+  font-size: 0.3rem;
+  color: #fff;
+  padding-left: 0.28rem;
+  display: flex;
+  align-items: center;
+  height: 1rem; }
+  .nav-bar__whole span {
+    font-size: 0.42rem;
+    margin-left: 0.28rem; }
+
 .nav-bar__left {
   position: absolute;
   left: 0;
@@ -1007,9 +1019,13 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .order__item {
   margin-bottom: 0.28rem;
   background-color: #fff; }
+  .order__item.order-mt28 {
+    margin-top: 0.28rem; }
   .order__item .shop-goods {
     margin-top: 0;
     padding: 0 15px 0.2rem; }
+    .order__item .shop-goods.goods-pd28 {
+      padding-top: 0.28rem; }
   .order__item .shop-goods__price {
     color: #333333;
     font-weight: 700; }
@@ -1070,6 +1086,22 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   align-items: center;
   font-size: initial; }
 
+.order-header {
+  display: flex;
+  align-items: center;
+  height: 0.82rem;
+  color: #666;
+  font-size: 0.28rem;
+  padding: 0 0.3rem; }
+  .order-header span {
+    margin: 0 0.18rem 0 0; }
+
+.order-number {
+  font-size: 0.24rem;
+  line-height: 0.72rem;
+  color: #999;
+  margin-left: 0.28rem; }
+
 .order-cell--flex-end {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
@@ -1078,6 +1110,13 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .order-cell__text {
   font-size: 0.28rem;
   color: #333333; }
+  .order-cell__text.text-right {
+    width: 100%;
+    text-align: right; }
+    .order-cell__text.text-right strong {
+      color: #fc4513;
+      font-size: 0.48rem;
+      font-weight: normal; }
 
 .order-cell__total {
   position: relative;
