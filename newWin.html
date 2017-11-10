@@ -50,6 +50,7 @@
         <a class="button button--submit" data-js="c">优惠券</a>
         <a class="button button--submit" data-js="a">收货地址</a>
         <a class="button button--submit" data-js="button--cart">商品属性</a>
+        <a class="button button--submit" data-js="button--modal">确认框</a>
     </div>
 </div>
 
@@ -164,6 +165,16 @@
             </div>
         </div>
     </div>
+    <!--确认框-->
+    <div data-js="modal-win" class="popup-page win-modal" data-show="false">
+        <div class="modal-body">
+            错过了，就没有优惠了噢，请三思！
+        </div>
+        <div class="modal-footer">
+            <button class="modal-button-inline button-cancel">取消</button>
+            <button class="modal-button-inline button-sure">确定</button>
+        </div>
+    </div>
 </div>
 
 
@@ -177,6 +188,7 @@
         $couponWin:$('[data-js="coupon-win"]'),
         $addressWin:$('[data-js="address-win"]'),
         $productWin:$('[data-js="product-win"]'),
+        $modalWin: $('[data-js="modal-win"]'),
         show: function (type) {
             this.$mask.attr('data-show', 'true');
             if(typeof this[type] !== null && this[type] !== 'undefined'){
@@ -241,6 +253,14 @@
         var $stepperObject = $(this).parent().find('.button-stepper__input');
         var $stepperObjectVal = parseInt($stepperObject.val());
         $stepperObject.val($stepperObjectVal + 1);
+    });
+
+    $('[data-js="button--modal"]').on('click', function (e) {
+        $pop.show('$modalWin');
+    });
+
+    $('.button-cancel').on('click', function (e) {
+        $pop.hide();
     });
 </script>
 </body>

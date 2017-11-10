@@ -41,6 +41,9 @@
     </div>
 
     <div class="shop-goods shop-goods--cart" data-state="selected">
+        <div class="shop-goods__top">
+            <a href="" class="order__close-button"></a>
+        </div>
         <div class="shop-goods__left">
             <img src="images/shop.jpg" alt="" class="shop-goods__img">
         </div>
@@ -57,6 +60,9 @@
     </div>
 
     <div class="shop-goods shop-goods--cart">
+        <div class="shop-goods__top">
+            <a href="" class="order__close-button"></a>
+        </div>
         <div class="shop-goods__left">
             <img src="images/shop-goods__img.jpg" alt="" class="shop-goods__img">
         </div>
@@ -93,12 +99,72 @@
     </div>
 </div>
 
+<div class="popup-page-wrap">
+    <div class="popup-mask" data-show="false"></div>
+    <div data-js="modal-win" class="popup-page win-modal" data-show="false">
+        <div class="modal-body">
+            错过了，就没有优惠了噢，请三思！
+        </div>
+        <div class="modal-footer">
+            <button class="modal-button-inline button-cancel">取消</button>
+            <button class="modal-button-inline button-sure">确定</button>
+        </div>
+    </div>
+</div>
 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+    var $pop = {
+        $winType: null,
+        $mask: $('.popup-mask'),
+        $popup_page: $('.popup-page'),
+        $modalWin: $('[data-js="modal-win"]'),
+        show: function (type) {
+            this.$mask.attr('data-show', 'true');
+            if(typeof this[type] !== null && this[type] !== 'undefined'){
+                this[type].attr('data-show', 'true');
+                this.$winType = this[type];
+            }
+        },
+        hide: function () {
+            this.$mask.attr('data-show', 'false');
+            if(this.$winType){
+                this.$winType.attr('data-show', 'false');
+            }
+        },
+        bind: function () {
+            var me = this;
+            this.$mask.on('click', function (e) {
+                me.hide();
+            })
+        },
+        init: function () {
+            this.bind();
+        }
+    };
 
+    $pop.init();
 
+    $('.button-stepper__minus').on('click', function (e) {
+        var $stepperObject = $(this).parent().find('.button-stepper__input');
+        var $stepperObjectVal = parseInt($stepperObject.val());
+        $stepperObject.val($stepperObjectVal > 1 ? $stepperObjectVal - 1 : 0);
+    });
 
+    $('.button-stepper__add').on('click', function (e) {
+        var $stepperObject = $(this).parent().find('.button-stepper__input');
+        var $stepperObjectVal = parseInt($stepperObject.val());
+        $stepperObject.val($stepperObjectVal + 1);
+    });
 
+    $('[data-js="button--modal"]').on('click', function (e) {
+        $pop.show('$modalWin');
+    });
 
+    $('.button-cancel').on('click', function (e) {
+        $pop.hide();
+    });
+</script>
 
 </body>
 </html>

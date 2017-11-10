@@ -141,7 +141,7 @@
 
 <div class="popup-page-wrap">
     <div class="popup-mask" data-show="false"></div>
-    <div class="popup-page win-modal" data-show="false">
+    <div data-js="modal-win" class="popup-page win-modal" data-show="false">
         <div class="modal-body">
             错过了，就没有优惠了噢，请三思！
         </div>
@@ -158,7 +158,7 @@
         $winType:null,
         $mask: $('.popup-mask'),
         $popup_page: $('.popup-page'),
-        $modalWin:$('.win-modal'),
+        $modalWin: $('[data-js="modal-win"]'),
         show: function (type) {
             this.$mask.attr('data-show', 'true');
             if(typeof this[type] !== null && this[type] !== 'undefined'){

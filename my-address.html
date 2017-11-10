@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth <= 750) {
+                    docEl.style.fontSize = (clientWidth / 750 * 100).toFixed(1) + 'px';
+                }else{
+                    docEl.style.fontSize = '100px';
+                }
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <title>地址管理</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .list .button{
+            margin-top: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-content" data-theme="grey">
+    <div class="nav-bar__block">
+        <div class="nav-bar bottom-line">
+            <div class="nav-bar__left">
+                <span class="nav-bar__back-button nav-bar__arrow"></span>
+            </div>
+            <div class="nav-bar__title">地址管理</div>
+        </div>
+        <div class="nav-bar__right">
+            <a class="nav-bar__text"></a>
+        </div>
+    </div>
+    <div class="address not-padding">
+        <div class="address__row">
+            <span class="address__user-name">Lillian</span>
+            <em class="address__user-mobile">136*****415</em>
+        </div>
+        <div class="address__row">
+            <p class="address__msg icon-arrow__pos not-padding">
+                <textarea readonly>广州市天河区林和西路3-15号耀中广场B座4209-4210室</textarea>
+            </p>
+        </div>
+        <div class="address__edit">
+            <a class="address__edit-link" data-js="button--edit">编辑</a>
+            <a class="address__edit-link" data-js="button--modal">删除</a>
+            <a class="address__edit-link" data-js="button--sure">保存</a>
+        </div>
+    </div>
+    <div class="address not-padding">
+        <div class="address__row">
+            <span class="address__user-name">Lillian</span>
+            <em class="address__user-mobile">136*****415</em>
+        </div>
+        <div class="address__row">
+            <p class="address__msg icon-arrow__pos not-padding">
+                <textarea readonly>广州市天河区林和西路3-15号耀中广场B座4209-4210室</textarea>
+            </p>
+        </div>
+        <div class="address__edit">
+            <a class="address__edit-link" data-js="button--edit">编辑</a>
+            <a class="address__edit-link" data-js="button--modal">删除</a>
+            <a class="address__edit-link" data-js="button--sure">保存</a>
+        </div>
+    </div>
+</div>
+
+<!--弹窗-->
+<div class="popup-page-wrap">
+    <div class="popup-mask" data-show="false"></div>
+    <!--确认框-->
+    <div data-js="modal-win" class="popup-page win-modal" data-show="false">
+        <div class="modal-body">
+            你确定要删除该地址吗？
+        </div>
+        <div class="modal-footer">
+            <button class="modal-button-inline button-cancel">取消</button>
+            <button class="modal-button-inline button-sure">确定</button>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+
+    var $pop = {
+        $winType:null,
+        $mask: $('.popup-mask'),
+        $popup_page: $('.popup-page'),
+        $modalWin: $('[data-js="modal-win"]'),
+        show: function (type) {
+            this.$mask.attr('data-show', 'true');
+            if(typeof this[type] !== null && this[type] !== 'undefined'){
+                this[type].attr('data-show', 'true');
+                this.$winType = this[type];
+            }
+        },
+        hide: function () {
+            this.$mask.attr('data-show', 'false');
+            if(this.$winType){
+                this.$winType.attr('data-show', 'false');
+            }
+        },
+        bind: function () {
+            var me = this;
+            this.$mask.on('click', function (e) {
+                me.hide();
+            })
+        },
+        init: function () {
+            this.bind();
+        }
+    };
+
+    $pop.init();
+
+    $('[data-js="button--modal"]').on('click', function (e) {
+        $pop.show('$modalWin');
+    });
+
+    $('.button-cancel').on('click', function (e) {
+        $pop.hide();
+    });
+
+    $('[data-js="button--edit"]').on('click', function (e) {
+        $(this).parents('.address').addClass('status-edit');
+        $(this).parents('.address').find('textarea').removeAttr('readonly');
+        $(this).parents('.address').find('textarea').focus();
+    });
+
+    $('[data-js="button--sure"]').on('click', function (e) {
+        $(this).parents('.address').removeClass('status-edit');
+        $(this).parents('.address').find('textarea').attr('readonly',true);
+    });
+</script>
+</body>
+</html>
