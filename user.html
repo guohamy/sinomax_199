@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth <= 750) {
+                    docEl.style.fontSize = (clientWidth / 750 * 100).toFixed(1) + 'px';
+                }else{
+                    docEl.style.fontSize = '100px';
+                }
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <title>用户</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .list .button{
+            margin-top: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-content" data-theme="grey">
+    <div class="nav-bar__block">
+        <div class="nav-bar bottom-line">
+            <div class="nav-bar__left">
+                <span class="nav-bar__back-button nav-bar__arrow"></span>
+            </div>
+            <div class="nav-bar__title">用户中心</div>
+        </div>
+        <div class="nav-bar__right">
+            <a class="nav-bar__text"></a>
+        </div>
+    </div>
+
+    <div class="user-center">
+        <ul>
+            <li class="icon-arrow__right">
+                <div class="bottom-line">
+                    <span>头像</span> <i class="avatar" style="background-image: url(./images/shop-logo.png)"></i>
+                </div>
+            </li>
+            <li class="icon-arrow__right" data-js="button--modal">
+                <div class="bottom-line">
+                    <span>昵称</span><span>疯子跟苦瓜</span>
+                </div>
+            </li>
+            <li class="icon-arrow__right">
+                <div>
+                    <span>性别</span><span>女</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!--弹窗-->
+<div class="popup-page-wrap">
+    <div class="popup-mask" data-show="false"></div>
+    <!--修改框-->
+    <div data-js="modal-win" class="popup-page win-modal" data-show="false">
+        <div class="modal-body">
+            修改昵称<br>
+            <input type="text" value="疯子跟苦瓜">
+        </div>
+        <div class="modal-footer">
+            <button class="modal-button-inline button-cancel">取消</button>
+            <button class="modal-button-inline button-sure">确定</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+
+    var $pop = {
+        $winType:null,
+        $mask: $('.popup-mask'),
+        $popup_page: $('.popup-page'),
+        $modalWin: $('[data-js="modal-win"]'),
+        show: function (type) {
+            this.$mask.attr('data-show', 'true');
+            if(typeof this[type] !== null && this[type] !== 'undefined'){
+                this[type].attr('data-show', 'true');
+                this.$winType = this[type];
+            }
+        },
+        hide: function () {
+            this.$mask.attr('data-show', 'false');
+            if(this.$winType){
+                this.$winType.attr('data-show', 'false');
+            }
+        },
+        bind: function () {
+            var me = this;
+            this.$mask.on('click', function (e) {
+                me.hide();
+            })
+        },
+        init: function () {
+            this.bind();
+        }
+    };
+
+    $pop.init();
+
+    $('[data-js="button--modal"]').on('click', function (e) {
+        $pop.show('$modalWin');
+    });
+
+    $('.button-cancel').on('click', function (e) {
+        $pop.hide();
+    });
+</script>
+</body>
+</html>

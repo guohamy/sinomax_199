@@ -2483,6 +2483,17 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     line-height: 0.38rem;
     color: #000;
     padding: 0.55rem 0.4rem 0.27rem; }
+    .win-modal .modal-body input {
+      width: 100%;
+      border: 1px #e5e5e5 solid;
+      border-radius: 0.04rem;
+      font-size: 0.3rem;
+      line-height: 0.58rem;
+      padding: 0.1rem 0.2rem;
+      color: #000;
+      margin: 0.3rem 0 0; }
+      .win-modal .modal-body input:focus {
+        outline: none; }
   .win-modal .modal-footer {
     text-align: right;
     padding: 0 0.4rem 0.23rem; }
@@ -2498,5 +2509,56 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
           color: #666666; }
         .win-modal .modal-footer button.modal-button-inline.button-sure {
           color: #fc4513; }
+
+/*
+ * 福利弹窗
+ */
+.welfare-dialog {
+  width: 1.3rem;
+  height: 1.33rem;
+  background-image: url(../images/fuli-bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  .welfare-dialog img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .welfare-dialog .welfare-gold {
+    z-index: 1; }
+  .welfare-dialog .welfare-text {
+    z-index: 2;
+    animation: bounceIn 2s 0ms infinite; }
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    transform: scale3d(1, 1, 1); } }
+.user-center ul li {
+  padding: 0 0.28rem;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer; }
+  .user-center ul li div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.3rem;
+    color: #000;
+    height: 0.98rem;
+    padding-right: 0.4rem; }
 
 /*# sourceMappingURL=index.css.map */
