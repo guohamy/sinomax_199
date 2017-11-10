@@ -663,8 +663,9 @@ input {
     text-align: center;
     background-color: #fff;
 
-    &.nav-black {
-        background-color: #000;
+    &.nav-white {
+        background-color: #fff;
+        box-shadow: 0 0 0.16rem rgba(0,0,0,0.2);
     }
 }
 

@@ -816,8 +816,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   user-select: none;
   text-align: center;
   background-color: #fff; }
-  .nav-bar.nav-black {
-    background-color: #000; }
+  .nav-bar.nav-white {
+    background-color: #fff;
+    box-shadow: 0 0 0.16rem rgba(0, 0, 0, 0.2); }
 
 .nav-bar__block {
   position: fixed;
