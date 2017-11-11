@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth <= 750) {
+                    docEl.style.fontSize = (clientWidth / 750 * 100).toFixed(1) + 'px';
+                }else{
+                    docEl.style.fontSize = '100px';
+                }
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <title>提现</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .list .button{
+            margin-top: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-content" data-theme="grey">
+
+    <div class="case-withdrawal">
+        <div class="case-withdrawal-header">
+            <i>0.01</i>
+            <span>账户余额(元)</span>
+        </div>
+        <ul>
+            <li class="case-withdrawal-mb28">
+                <div>
+                    <span>提现金额<b>（元）</b></span>
+                    <input type="text" placeholder="请填写提现金额，不可大于账户余额">
+                </div>
+            </li>
+            <li>
+                <div class="bottom-line">
+                    <span>提现方式</span>
+                </div>
+            </li>
+            <li>
+                <div class="bottom-line">
+                    <img src="./images/icon__pay.png" alt="">
+                    <span>支付宝</span>
+                </div>
+            </li>
+            <li class="case-withdrawal-mb28">
+                <div>
+                    <input type="text" placeholder="请输入您的支付宝账号">
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span>收款人</span>
+                    <input type="text" placeholder="请填写收款人">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer-nav__fixed-bar">
+        <div class="footer-nav__block top-line">
+            <div class="payment__block">
+                <button class="button button--payment">提交申请</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

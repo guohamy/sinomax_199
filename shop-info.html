@@ -49,6 +49,12 @@
 
     <!--商品信息-->
     <div class="shop-about">
+
+        <div class="welfare-dialog" data-js="box-welfare">
+            <img src="./images/fuli-gold.png" class="welfare-gold" alt="">
+            <img src="./images/fuli-text.png" class="welfare-text" alt="">
+        </div>
+
         <h2 class="shop-about__title">水晶蝴蝶结羊毛夹克</h2>
         <p class="shop-about__price">¥1,680</p>
         <ul class="shop-about__tags top-line">
@@ -220,6 +226,61 @@
             </div>
         </div>
     </div>
+
+    <div data-js="share-box" data-type="3" class="fade-page fade-page-center" data-show="false">
+        <a data-js="win-mod__close-btn" class="share-close"></a>
+    </div>
+
+    <!--优惠悬浮窗-->
+    <div data-js="coupon-fixed" class="fade-page fade-page-left page-single" data-show="false"></div>
+
+    <!--优惠券 背景1 直减/满减 背景设置 data-theme=1/2-->
+    <div data-js="coupon-box" data-type="1" data-theme="1" class="fade-page fade-page-center" data-show="false">
+        <a class="coupon-close" data-js="coupon-close"></a>
+        <span class="coupon-prize coupon-money">
+            <i class="coupon-symbol">￥</i>
+            <em class="coupone-number">20</em>
+        </span>
+        <span class="coupon-range">HAChill（哈超）旗下所有商品购买（满100使用）</span>
+        <span class="coupon-time">有效期至2017-12-8</span>
+        <a class="coupon-share" data-js="share-button"></a>
+    </div>
+
+    <!--优惠券 背景1 折扣 背景设置 data-theme=1/2-->
+    <!--<div data-js="coupon-box" data-type="1" data-theme="1" class="fade-page fade-page-center" data-show="false">
+        <a class="coupon-close" data-js="coupon-close"></a>
+        <span class="coupon-prize coupon-discount">
+            <em class="coupone-number">8<span>.5</span></em>
+            <i class="coupon-text">折</i>
+        </span>
+        <span class="coupon-range">HAChill（哈超）旗下所有商品购买（满100使用）</span>
+        <span class="coupon-time">有效期至2017-12-8</span>
+        <a class="coupon-share" data-js="share-button"></a>
+    </div>-->
+
+    <!--优惠券 类型2 折扣-->
+    <!--<div data-js="coupon-box" data-type="2" class="fade-page fade-page-center" data-show="false">
+        <a class="coupon-close" data-js="coupon-close"></a>
+        <span class="coupon-prize coupon-discount">
+            <em class="coupone-number">8<span>.5</span></em>
+            <i class="coupon-text">折</i>
+        </span>
+        <span class="coupon-range">HAChill（哈超）旗下所有商品购买（满100使用）</span>
+        <span class="coupon-time">有效期至2017-12-8</span>
+        <a class="coupon-share" data-js="share-button"></a>
+    </div>-->
+
+    <!--优惠券 类型2 直减/满减-->
+    <!--<div data-js="coupon-box" data-type="2" class="fade-page fade-page-center" data-show="false">
+        <a class="coupon-close" data-js="coupon-close"></a>
+        <span class="coupon-prize coupon-money">
+            <i class="coupon-symbol">￥</i>
+            <em class="coupone-number">20</em>
+        </span>
+        <span class="coupon-range">HAChill（哈超）旗下所有商品购买（满100使用）</span>
+        <span class="coupon-time">有效期至2017-12-8</span>
+        <a class="coupon-share" data-js="share-button"></a>
+    </div>-->
 </div>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -230,12 +291,17 @@
     var $pop = {
         $winType:null,
         $mask: $('.popup-mask'),
-        $popup_page: $('.popup-page'),
+        $popup_page: $('.popup-page,.fade-page'),
         $couponWin:$('[data-js="coupon-win"]'),
         $addressWin:$('[data-js="address-win"]'),
         $productWin:$('[data-js="product-win"]'),
+        $coupon: $('[data-js="coupon-box"]'),
+        $share: $('[data-js="share-box"]'),
+        $couponTips: $('[data-js="coupon-fixed"]'),
         show: function (type) {
-            this.$mask.attr('data-show', 'true');
+            if(!this[type].hasClass('page-single')){
+                this.$mask.attr('data-show', 'true');
+            }
             if(typeof this[type] !== null && this[type] !== 'undefined'){
                 this[type].attr('data-show', 'true');
                 this.$winType = this[type];
@@ -299,6 +365,21 @@
         var $stepperObjectVal = parseInt($stepperObject.val());
         $stepperObject.val($stepperObjectVal + 1);
     });
+
+    $('[data-js="box-welfare"]').on('click', function (e) {
+        $pop.show('$coupon');
+    });
+
+    $('[ data-js="coupon-close"]').on('click', function (e) {
+        $pop.hide();
+    });
+
+    $('[ data-js="share-button"]').on('click', function (e) {
+        $pop.hide();
+        $pop.show('$share');
+    });
+
+    $pop.show('$couponTips');
 
     $('.lazy-load').lazyload({effect: "fadeIn"});
 </script>
