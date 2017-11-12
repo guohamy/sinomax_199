@@ -1013,7 +1013,9 @@ input {
     font-size: 0.24rem;
     line-height: 0.72rem;
     color: #999;
-    margin-left: 0.28rem;
+    margin: 0 0.28rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .order-cell--flex-end {
@@ -1070,6 +1072,7 @@ input {
 
     &.not-padding {
         padding-bottom: 0;
+        overflow: hidden;
     }
 }
 
@@ -2394,6 +2397,9 @@ input {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
+    .address__row {
+        padding-left: 0.5rem;
+    }
     .address__remove {
         display: block;
         width: 0.28rem;
@@ -2555,7 +2561,7 @@ input {
             }
 
             &.icon-address {
-                background-image: url(../images/icon-address.png);
+                background-image: url(../images/icon-address-manager.png);
             }
         }
     }
@@ -2911,6 +2917,7 @@ input {
                 position: absolute;
                 justify-content: center;
                 left: 0.74rem;
+                letter-spacing: -1px;
 
                 &.coupon-money {
                     align-items: flex-start;
@@ -3151,7 +3158,7 @@ input {
         li {
             height: 1rem;
             background-color: #fff;
-            padding-left: 0.28rem;
+            padding: 0 0.28rem;
             display: flex;
             align-items: center;
 
@@ -3164,6 +3171,21 @@ input {
                 height: 100%;
                 display: flex;
                 align-items: center;
+                position: relative;
+
+                &.checked:before {
+                    content: '';
+                    width: 0.32rem;
+                    height: 0.32rem;
+                    background-image: url(../images/icon__radio-selected.png);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                }
 
                 img {
                     width: 0.48rem;
