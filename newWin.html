@@ -49,6 +49,7 @@
     <div class="list">
         <a class="button button--submit" data-js="c">优惠券</a>
         <a class="button button--submit" data-js="a">收货地址</a>
+        <a class="button button--submit" data-js="b">收货地址(空)</a>
         <a class="button button--submit" data-js="button--cart">商品属性</a>
         <a class="button button--submit" data-js="button--modal">确认框</a>
     </div>
@@ -67,21 +68,21 @@
                 </div>
                 <div class="win-mod__body">
                     <!--代金券-->
-                    <div class="coupon-cell" data-state="voucher">
+                    <div class="coupon-cell">
                         <img class="coupon__logo" src="images/shop-logo.png" alt="">
                         <p class="coupon__des">HAChill（哈超）旗下所有商品购买立减100</p>
                         <p class="coupon__times">有效期至 2017-12-8</p>
                         <span class="coupon__state-button">马上使用</span>
                     </div>
                     <!--满减券-->
-                    <div class="coupon-cell" data-state="min">
+                    <div class="coupon-cell">
                         <img class="coupon__logo" src="images/shop-logo.png" alt="">
                         <p class="coupon__des">HAChill（哈超）旗下所有商品购买立减100</p>
                         <p class="coupon__times">有效期至 2017-12-8</p>
                         <span class="coupon__state-button" data-state="overdue">已过期</span>
                     </div>
                     <!--打骨折券-->
-                    <div class="coupon-cell" data-state="discount">
+                    <div class="coupon-cell">
                         <img class="coupon__logo" src="images/shop-logo.png" alt="">
                         <p class="coupon__des">HAChill（哈超）旗下所有商品</p>
                         <p class="coupon__times">有效期至 2017-12-8</p>
@@ -136,6 +137,23 @@
                         </div>
                         <a class="address__remove"></a>
                     </div>
+                </div>
+                <div class="win-mod__footer">
+                    <a class="address__add-button">新增收货地址</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--收货地址窗口 无地址-->
+    <div data-js="address-win" class="popup-page popup-page--bottom" data-show="false">
+        <div class="popup-content">
+            <div class="win-mod win-mod--address">
+                <div class="win-mod__head">
+                    <h4 class="win-mod__title">收货地址</h4>
+                    <a class="win-mod__close-btn" data-js="win-mod__close-btn"></a>
+                </div>
+                <!-- 地址栏为空时 win-mod__body 添加class win-mode__body-empty -->
+                <div class="win-mod__body win-mode__body-empty">
                 </div>
                 <div class="win-mod__footer">
                     <a class="address__add-button">新增收货地址</a>
@@ -202,7 +220,8 @@
         $mask: $('.popup-mask'),
         $popup_page: $('.popup-page'),
         $couponWin:$('[data-js="coupon-win"]'),
-        $addressWin:$('[data-js="address-win"]'),
+        $addressWin:$('[data-js="address-win"]').eq(0),
+        $addressWin2:$('[data-js="address-win"]').eq(1),
         $productWin:$('[data-js="product-win"]'),
         $modalWin: $('[data-js="modal-win"]'),
         show: function (type) {
@@ -239,6 +258,10 @@
 
     $('[data-js="a"]').on('click', function (e) {
         $pop.show('$addressWin');
+    });
+
+    $('[data-js="b"]').on('click', function (e) {
+        $pop.show('$addressWin2');
     });
 
     $('[data-js="button--cart"]').on('click', function (e) {

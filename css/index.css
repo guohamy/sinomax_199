@@ -323,34 +323,34 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .button [data-state="accounts"] {
   width: 2.84rem;
   border-radius: 3px;
-  background-color: #ec3932; }
+  background-color: #fc4513; }
 .button [data-state="del"] {
   width: 100%;
   border-radius: 3px;
-  background-color: #ec3932; }
+  background-color: #fc4513; }
 
 .button--cart {
   background-color: #333; }
 
 .button--buy {
-  background-color: #ec3932; }
+  background-color: #fc4513; }
 
 .button--unBuy {
   background-color: #c0c0c0; }
 
 .button--submit {
   width: 100%;
-  background-color: #ec3932; }
+  background-color: #fc4513; }
 
 .button--accounts {
   width: 2.84rem;
   border-radius: 3px;
-  background-color: #ec3932; }
+  background-color: #fc4513; }
 
 .button--del, .button--payment {
   width: 100%;
   border-radius: 3px;
-  background-color: #ec3932; }
+  background-color: #fc4513; }
 
 .button-stepper {
   float: right;
@@ -448,7 +448,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   color: #222222;
   border: 1px solid; }
   .tags.cur, .tags[data-state="selected"] {
-    color: #ec3932; }
+    color: #fc4513; }
 
 .product-win {
   -webkit-box-sizing: border-box;
@@ -506,7 +506,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .product-attr__title {
   padding-top: 0.3rem;
   font-size: 0.38rem;
-  color: #ec3932;
+  color: #fc4513;
   font-weight: 400;
   line-height: 1.5; }
 
@@ -646,9 +646,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   margin: 0; }
 
 .van-switch--on {
-  background-color: #ec3932; }
+  background-color: #fc4513; }
   .van-switch--on::after {
-    border-color: #ec3932; }
+    border-color: #fc4513; }
   .van-switch--on .van-switch__node {
     -webkit-transform: translateX(21px);
     transform: translateX(21px); }
@@ -710,7 +710,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     -webkit-transition: width 0.3s linear, background-color 0.3s linear;
     transition: width 0.3s linear, background-color 0.3s linear; }
     .m-swipe .m-nav__item.cur {
-      background-color: #ec3932; }
+      background-color: #fc4513; }
 
 .icon-arrow__pos {
   position: relative;
@@ -794,6 +794,11 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   position: relative; }
   .main-content[data-theme="grey"] {
     background-color: #f7f7f7; }
+  .main-content[data-empty="true"] {
+    background-image: url(../images/cart-empty.png);
+    background-position: center 2.26rem;
+    background-repeat: no-repeat;
+    background-size: 2.75rem auto; }
   .main-content[data-theme="qrcode"] {
     background-image: url(../images/bg-qrcode.jpg);
     background-position: center center;
@@ -1007,9 +1012,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     height: 0.06rem;
     background-color: transparent; }
   .order__tab.cur, .order__tab[data-state="selected"] {
-    color: #ec3932; }
+    color: #fc4513; }
   .order__tab.cur:before, .order__tab[data-state="selected"]:before {
-    background-color: #ec3932; }
+    background-color: #fc4513; }
 
 .order__list {
   display: none;
@@ -1035,7 +1040,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .order__state-text {
   font-size: 0.28rem;
-  color: #f23365; }
+  color: #fc4513; }
 
 .order__close-button {
   margin-left: auto;
@@ -1068,7 +1073,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   border: 1px solid; }
 
 .order__button--red {
-  color: #ec3932; }
+  color: #fc4513; }
 
 .order__button--blue {
   margin-right: 0.2rem;
@@ -1124,7 +1129,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .order-cell__total {
   position: relative;
   padding-left: 0.2rem;
-  color: #f23365; }
+  color: #fc4513; }
   .order-cell__total i {
     font-style: normal; }
 
@@ -1255,7 +1260,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .shop-goods__price {
   position: relative;
   margin-top: 0.24rem;
-  color: #ec3932;
+  color: #fc4513;
   font-size: 0.32rem;
   line-height: 0.48rem; }
 
@@ -1283,8 +1288,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     position: absolute;
     top: 50%;
     left: 1.32rem;
-    width: 0.76rem;
-    height: 0.34rem;
+    width: 0.74rem;
+    height: 0.32rem;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -1309,7 +1314,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -ms-flex-item-align: center;
   align-self: center;
   font-size: 0.26rem;
-  color: #ec3932; }
+  color: #fc4513; }
 
 .shop-coupon__title {
   font-size: 0.28rem;
@@ -1432,7 +1437,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .accounts__total {
   padding-right: 0.3rem;
   font-size: 0.3rem;
-  color: #ec3932; }
+  color: #fc4513; }
 
 .accounts__cell {
   display: -webkit-box;
@@ -1456,7 +1461,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .accounts__price {
   font-size: 0.24rem;
-  color: #ec3932; }
+  color: #fc4513; }
 
 .accounts__symbol {
   padding: 0 2px;
@@ -1484,7 +1489,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     background-size: cover;
     background-image: url(../images/icon__radio-default.png); }
   .shop-goods--cart .cur:before, .shop-goods--cart[data-state="selected"]:before {
-    background-image: url(../images/icon__radio-selected.png); }
+    background-image: url(../images/check-orange.png); }
   .shop-goods--cart .button-stepper {
     float: none;
     position: absolute;
@@ -1532,14 +1537,14 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   padding: 0 15px;
   font-size: 0.24rem;
   line-height: 1.6;
-  color: #ec3932; }
+  color: #fc4513; }
 
 .shop-about__price {
   margin-bottom: 0.1rem;
   padding: 0 15px;
   font-size: 0.48rem;
   line-height: 2;
-  color: #ec3932; }
+  color: #fc4513; }
 
 .shop-about__figure {
   -webkit-box-sizing: border-box;
@@ -1583,7 +1588,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   padding-right: 0.35rem;
   height: 0.4rem;
   line-height: 0.4rem;
-  color: #ec3932;
+  color: #fc4513;
   font-style: normal;
   font-size: 0.24rem;
   background: url(../images/icon-video.png) no-repeat 100% 50%;
@@ -1612,7 +1617,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   color: #333333; }
 
 .shop-about__selected {
-  color: #ec3932;
+  color: #fc4513;
   font-size: 0.28rem; }
 
 .shop-about__cell {
@@ -1661,7 +1666,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .shop-about__cell-right {
   width: 100%;
-  color: #ec3932; }
+  color: #fc4513; }
 
 .shop-about__checkbox {
   display: flex; }
@@ -1684,7 +1689,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
       background-size: cover;
       background-image: url(../images/icon__radio-default.png); }
     .shop-about__checkbox span.cur:before, .shop-about__checkbox span[data-state="selected"]:before {
-      background-image: url(../images/icon__radio-selected.png); }
+      background-image: url(../images/check-orange.png); }
 
 .shop-about__postage-text {
   font-size: 0.28rem;
@@ -1951,7 +1956,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     background-size: cover;
     background-image: url(../images/icon__radio-default.png); }
   .payment-cell .cur:before, .payment-cell[data-state="selected"]:before {
-    background-image: url(../images/icon__radio-selected.png); }
+    background-image: url(../images/check-orange.png); }
 
 .payment-cell__left {
   margin-right: auto; }
@@ -1963,7 +1968,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .payment-cell__total {
   font-size: 0.28rem;
-  color: #ec3932; }
+  color: #fc4513; }
 
 .payment-cell__title {
   margin-right: auto;
@@ -1992,7 +1997,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .payment-success-page {
   background-color: #fff; }
   .payment-success-page .nav-bar__text {
-    color: #ec3932;
+    color: #fc4513;
     font-size: 0.36rem; }
 
 .payment__success-content {
@@ -2009,7 +2014,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .payment__success-text {
   font-size: 0.32rem;
   line-height: 2;
-  color: #ec3932; }
+  color: #fc4513; }
 
 .payment__success-items {
   margin-bottom: 2.5rem; }
@@ -2028,7 +2033,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     margin-bottom: 0.2rem;
     height: 0.84rem; }
   .payment__success-cell:last-child .success-cell__text {
-    color: #ec3932; }
+    color: #fc4513; }
 
 .success-cell__title, .success-cell__text {
   font-size: 0.28rem; }
@@ -2049,7 +2054,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   width: 3.4rem;
   height: 0.8rem;
   line-height: 0.8rem;
-  color: #ec3932;
+  color: #fc4513;
   text-align: center;
   font-size: 0.32rem;
   border: 1px solid;
@@ -2074,19 +2079,11 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .win-mod--address .win-mod__body {
   background-color: #fff; }
   .win-mod--address .win-mod__body.win-mode__body-empty {
-    background-image: url(../images/address-none.png);
-    background-position: center center;
+    height: 4.64rem;
+    background-image: url(../images/empty-address.png);
+    background-position: center 1.14rem;
     background-repeat: no-repeat;
-    background-size: 1.29rem auto; }
-    .win-mod--address .win-mod__body.win-mode__body-empty:before {
-      content: '快去新增地址哦~';
-      position: absolute;
-      font-size: 0.28rem;
-      line-height: 1;
-      color: #999999;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, 1.17rem); }
+    background-size: 2.2rem auto; }
 
 .win-mod__head {
   position: relative;
@@ -2164,7 +2161,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .coupon__des {
   position: relative;
   padding-top: 0.2rem;
-  text-indent: 3.5em;
   font-size: 0.26rem;
   color: #333333;
   line-height: 1.6; }
@@ -2173,8 +2169,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     position: absolute;
     top: 0.22rem;
     left: 1.83rem;
-    width: 0.76rem;
-    height: 0.34rem;
+    width: 0.74rem;
+    height: 0.32rem;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover; }
@@ -2196,7 +2192,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   line-height: 0.46rem;
   text-align: center;
   border-radius: 1em;
-  color: #ec3932;
+  color: #fc4513;
   font-size: 0.26rem;
   border: 1px solid; }
   .coupon__state-button[data-state="overdue"] {
@@ -2220,7 +2216,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     background-size: cover;
     background-image: url(../images/icon__radio-default.png); }
   .address-cell.cur:before, .address-cell[data-state="selected"]:before {
-    background-image: url(../images/icon__radio-selected.png); }
+    background-image: url(../images/check-orange.png); }
   .address-cell .address__msg {
     text-indent: 0;
     padding-left: 0.5rem;
@@ -2244,7 +2240,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   display: block;
   height: 1rem;
   line-height: 1rem;
-  color: #ec3932;
+  color: #fc4513;
   text-align: center;
   font-size: 0.32rem; }
   .address__add-button:after {
@@ -2413,7 +2409,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   color: #666666; }
 
 .m-confirm__button--enter {
-  color: #ec3932; }
+  color: #fc4513; }
 
 /*弹出层容器*/
 .popup-page-wrap .popup-mask {
@@ -2501,7 +2497,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
       line-height: 0.58rem;
       padding: 0.1rem 0.2rem;
       color: #000;
-      margin: 0.3rem 0 0; }
+      margin: 0.3rem 0; }
       .win-modal .modal-body input:focus {
         outline: none; }
   .win-modal .modal-footer {
@@ -2798,7 +2794,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
         content: '';
         width: 0.32rem;
         height: 0.32rem;
-        background-image: url(../images/icon__radio-selected.png);
+        background-image: url(../images/check-orange.png);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;

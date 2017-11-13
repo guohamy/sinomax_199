@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import "reset";
 
-$primaryColor: #ec3932;
+$primaryColor: #fc4513;
 
 input {
     &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
@@ -635,6 +635,14 @@ input {
         background-color: #f7f7f7;
     }
 
+    &[data-empty="true"]{
+      background-image: url(../images/cart-empty.png);
+      background-position: center 2.26rem;
+      background-repeat: no-repeat;
+      background-size: 2.75rem auto;
+    }
+
+
     &[data-theme="qrcode"]{
         background-image: url(../images/bg-qrcode.jpg);
         background-position: center center;
@@ -937,7 +945,7 @@ input {
 
 .order__state-text {
     font-size: 0.28rem;
-    color: #f23365;
+    color: #fc4513;
 }
 
 .order__close-button {
@@ -1043,7 +1051,7 @@ input {
 .order-cell__total {
     position: relative;
     padding-left: 0.2rem;
-    color: #f23365;
+    color: #fc4513;
     i {
         font-style: normal;
     }
@@ -1249,8 +1257,8 @@ input {
         position: absolute;
         top: 50%;
         left: 1.32rem;
-        width: 0.76rem;
-        height: 0.34rem;
+        width: 0.74rem;
+        height: 0.32rem;
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;
@@ -1507,7 +1515,7 @@ input {
         background-image: url(../images/icon__radio-default.png);
     }
     .cur:before, &[data-state="selected"]:before {
-        background-image: url(../images/icon__radio-selected.png);
+        background-image: url(../images/check-orange.png);
     }
     .button-stepper {
         float: none;
@@ -1741,7 +1749,7 @@ input {
         }
 
         &.cur:before, &[data-state="selected"]:before {
-            background-image: url(../images/icon__radio-selected.png);
+            background-image: url(../images/check-orange.png);
         }
     }
 }
@@ -2066,7 +2074,7 @@ input {
         background-image: url(../images/icon__radio-default.png);
     }
     .cur:before, &[data-state="selected"]:before {
-        background-image: url(../images/icon__radio-selected.png);
+        background-image: url(../images/check-orange.png);
     }
 }
 
@@ -2218,21 +2226,11 @@ input {
     background-color: #fff;
 
     &.win-mode__body-empty {
-        background-image: url(../images/address-none.png);
-        background-position: center center;
+        height: 4.64rem;
+        background-image: url(../images/empty-address.png);
+        background-position: center 1.14rem;
         background-repeat: no-repeat;
-        background-size: 1.29rem auto;
-
-        &:before {
-            content: '快去新增地址哦~';
-            position: absolute;
-            font-size: 0.28rem;
-            line-height: 1;
-            color: #999999;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,1.17rem);
-        }
+        background-size: 2.2rem auto;
     }
 }
 
@@ -2327,7 +2325,7 @@ input {
 .coupon__des {
     position: relative;
     padding-top: 0.2rem;
-    text-indent: 3.5em;
+    //text-indent: 3.5em;
     font-size: 0.26rem;
     color: #333333;
     line-height: 1.6;
@@ -2336,8 +2334,8 @@ input {
         position: absolute;
         top: 0.22rem;
         left: 1.83rem;
-        width: 0.76rem;
-        height: 0.34rem;
+        width: 0.74rem;
+        height: 0.32rem;
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;
@@ -2390,7 +2388,7 @@ input {
         background-image: url(../images/icon__radio-default.png);
     }
     &.cur:before, &[data-state="selected"]:before {
-        background-image: url(../images/icon__radio-selected.png);
+        background-image: url(../images/check-orange.png);
     }
     .address__msg {
         text-indent: 0;
@@ -2747,7 +2745,7 @@ input {
             line-height: 0.58rem;
             padding: 0.1rem 0.2rem;
             color: #000;
-            margin: 0.3rem 0 0;
+            margin: 0.3rem 0;
 
             &:focus {
                 outline: none;
@@ -3177,7 +3175,7 @@ input {
                     content: '';
                     width: 0.32rem;
                     height: 0.32rem;
-                    background-image: url(../images/icon__radio-selected.png);
+                    background-image: url(../images/check-orange.png);
                     background-position: center center;
                     background-repeat: no-repeat;
                     background-size: cover;

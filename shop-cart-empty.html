@@ -24,76 +24,60 @@
             win.addEventListener(resizeEvt, recalc, false);
         })(document, window);
     </script>
-    <title>用户</title>
+    <title>购物车</title>
     <link rel="stylesheet" href="css/index.css">
-    <style>
-        .list .button{
-            margin-top: 14px;
-        }
-    </style>
+
 </head>
 <body>
+<div class="main-content" data-theme="grey" data-empty="true">
 
-<div class="main-content" data-theme="grey">
     <div class="nav-bar__block">
         <div class="nav-bar bottom-line">
             <div class="nav-bar__left">
                 <span class="nav-bar__back-button nav-bar__arrow"></span>
             </div>
-            <div class="nav-bar__title">用户中心</div>
-        </div>
-        <div class="nav-bar__right">
-            <a class="nav-bar__text"></a>
+            <div class="nav-bar__title">购物车</div>
         </div>
     </div>
 
-    <div class="user-center">
-        <ul>
-            <li class="icon-arrow__right">
-                <div class="bottom-line">
-                    <span>头像</span> <i class="avatar" style="background-image: url(./images/shop-logo.png)"></i>
-                </div>
-            </li>
-            <li class="icon-arrow__right" data-js="button--modal">
-                <div class="bottom-line">
-                    <span>昵称</span><span>疯子跟苦瓜</span>
-                </div>
-            </li>
-            <li class="icon-arrow__right">
-                <div>
-                    <span>性别</span><span>女</span>
-                </div>
-            </li>
-        </ul>
-    </div>
-
+    <!--
+    结算按钮:
+    data-state="edit"      编辑状态
+    data-state="accounts"  结算状态
+    -->
     <div class="footer-nav__fixed-bar">
         <div class="footer-nav__block top-line">
-            <div class="payment__block">
-                <button class="button button--payment">保存</button>
+            <div class="accounts__block" data-state="accounts">
+                <div class="accounts__left">
+                    <a class="accounts__radio" data-state="selected">全选</a>
+                    <p class="accounts__total">合计:¥<span class="accounts__money">389.00</span></p>
+                </div>
+                <div class="accounts__right">
+                    <button class="button button--accounts">去结算</button>
+                    <button class="button button--del">删除</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-
-<!--弹窗-->
 <div class="popup-page-wrap">
     <div class="popup-mask" data-show="false"></div>
-    <!--修改框-->
     <div data-js="modal-win" class="popup-page win-modal" data-show="false">
         <div class="modal-body">
-            修改昵称<br>
-            <input type="text" value="疯子跟苦瓜">
+            错过了，就没有优惠了噢，请三思！
+        </div>
+        <div class="modal-footer">
+            <button class="modal-button-inline button-cancel">取消</button>
+            <button class="modal-button-inline button-sure">确定</button>
         </div>
     </div>
 </div>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript">
-
+<script>
     var $pop = {
-        $winType:null,
+        $winType: null,
         $mask: $('.popup-mask'),
         $popup_page: $('.popup-page'),
         $modalWin: $('[data-js="modal-win"]'),
@@ -123,6 +107,18 @@
 
     $pop.init();
 
+    $('.button-stepper__minus').on('click', function (e) {
+        var $stepperObject = $(this).parent().find('.button-stepper__input');
+        var $stepperObjectVal = parseInt($stepperObject.val());
+        $stepperObject.val($stepperObjectVal > 1 ? $stepperObjectVal - 1 : 0);
+    });
+
+    $('.button-stepper__add').on('click', function (e) {
+        var $stepperObject = $(this).parent().find('.button-stepper__input');
+        var $stepperObjectVal = parseInt($stepperObject.val());
+        $stepperObject.val($stepperObjectVal + 1);
+    });
+
     $('[data-js="button--modal"]').on('click', function (e) {
         $pop.show('$modalWin');
     });
@@ -131,5 +127,6 @@
         $pop.hide();
     });
 </script>
+
 </body>
 </html>
