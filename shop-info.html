@@ -248,7 +248,7 @@
     </div>
 
     <!--优惠悬浮窗-->
-    <div data-js="coupon-fixed" class="fade-page fade-page-left page-single" data-show="false"></div>
+    <div data-js="coupon-fixed" class="fade-page" data-countDown="2000" data-show="true"></div>
 
     <!--优惠券 背景1 直减/满减 背景设置 data-theme=1/2-->
     <div data-js="coupon-box" data-type="1" data-theme="1" class="fade-page fade-page-center" data-show="false">
@@ -314,12 +314,20 @@
         $coupon: $('[data-js="coupon-box"]'),
         $share: $('[data-js="share-box"]'),
         $couponTips: $('[data-js="coupon-fixed"]'),
-        show: function (type) {
+        show: function (type,className) {
             if(!this[type].hasClass('page-single')){
                 this.$mask.attr('data-show', 'true');
             }
+            if(this[type].attr('data-countDown')){
+                setTimeout(function () {
+                    $pop.hide();
+                },parseInt(this[type].attr('data-countDown')));
+            }
             if(typeof this[type] !== null && this[type] !== 'undefined'){
                 this[type].attr('data-show', 'true');
+                if(className){
+                    this[type].addClass(className);
+                }
                 this.$winType = this[type];
             }
         },
@@ -395,7 +403,8 @@
         $pop.show('$share');
     });
 
-    $pop.show('$couponTips');
+    //分享成功唤起
+    $pop.show('$couponTips','open');
 
     $('.lazy-load').lazyload({effect: "fadeIn"});
 </script>

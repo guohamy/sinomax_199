@@ -2533,7 +2533,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     left: 0;
     top: 0; }
   .welfare-dialog .welfare-gold {
-    z-index: 1; }
+    z-index: 1;
+    animation: scale 1.75s linear 500ms infinite; }
   .welfare-dialog .welfare-text {
     z-index: 2;
     animation: bounceIn 2s 0ms infinite; }
@@ -2552,6 +2553,13 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   80% {
     transform: scale3d(0.97, 0.97, 0.97); }
   to {
+    transform: scale3d(1, 1, 1); } }
+@keyframes scale {
+  0% {
+    transform: scale3d(1, 1, 1); }
+  50% {
+    transform: scale3d(1.2, 1.2, 1.2); }
+  100% {
     transform: scale3d(1, 1, 1); } }
 .fade-page {
   position: fixed;
@@ -2573,14 +2581,28 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     top: 50%;
     transform: translate(-50%, -50%); }
   .fade-page[data-js="coupon-fixed"] {
-    width: 2.68rem;
-    height: 0.76rem;
-    background-image: url(../images/coupon-box.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    left: 0.6rem;
-    bottom: 3.6rem; }
+    background-image: url(../images/coupon-box-b.png);
+    left: 50%;
+    bottom: 50%;
+    width: 3.26rem;
+    height: 3.01rem;
+    margin: 0 0 -1.515rem -1.63rem;
+    transition-duration: 450ms;
+    opacity: 0;
+    visibility: hidden; }
+    .fade-page[data-js="coupon-fixed"].open {
+      opacity: 1;
+      visibility: visible; }
+    .fade-page[data-js="coupon-fixed"][data-show="false"] {
+      left: 0.6rem;
+      bottom: 2.6rem;
+      width: 2.68rem;
+      height: 0.76rem;
+      background-image: url(../images/coupon-box.png);
+      margin: 0; }
   .fade-page[data-js="coupon-box"] {
     width: 7.32rem;
     height: 8.2rem;

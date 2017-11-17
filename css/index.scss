@@ -2792,7 +2792,6 @@ input {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    //animation: upDown 1s linear 500ms infinite;
 
     img {
         width: 100%;
@@ -2803,6 +2802,7 @@ input {
 
     .welfare-gold {
         z-index: 1;
+        animation: scale 1.75s linear 500ms infinite;
     }
 
     .welfare-text {
@@ -2841,6 +2841,18 @@ input {
     }
 }
 
+@keyframes scale {
+    0% {
+        transform: scale3d(1,1,1);
+    }
+    50% {
+        transform: scale3d(1.2,1.2,1.2);
+    }
+    100% {
+        transform: scale3d(1,1,1);
+    }
+}
+
 .fade-page {
     position: fixed;
     z-index: 12;
@@ -2872,14 +2884,32 @@ input {
     }
 
     &[data-js="coupon-fixed"] {
-        width: 2.68rem;
-        height: 0.76rem;
-        background-image: url(../images/coupon-box.png);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        left: 0.6rem;
-        bottom: 3.6rem;
+        background-image: url(../images/coupon-box-b.png);
+        left: 50%;
+        bottom: 50%;
+        width: 3.26rem;
+        height: 3.01rem;
+        margin: 0 0 -1.515rem -1.63rem;
+        transition-duration: 450ms;
+        opacity: 0;
+        visibility: hidden;
+
+        &.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &[data-show="false"] {
+            left: 0.6rem;
+            bottom: 2.6rem;
+            width: 2.68rem;
+            height: 0.76rem;
+            background-image: url(../images/coupon-box.png);
+            margin: 0;
+        }
     }
 
     &[data-js="coupon-box"] {
