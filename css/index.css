@@ -2590,7 +2590,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     width: 3.26rem;
     height: 3.01rem;
     margin: 0 0 -1.515rem -1.63rem;
-    transition-duration: 450ms;
+    transition-duration: 1000ms;
+    transition-timing-function: ease;
     opacity: 0;
     visibility: hidden; }
     .fade-page[data-js="coupon-fixed"].open {
