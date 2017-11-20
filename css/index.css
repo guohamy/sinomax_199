@@ -2605,84 +2605,80 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
       background-image: url(../images/coupon-box.png);
       margin: 0; }
   .fade-page[data-js="coupon-box"] {
-    width: 7.32rem;
-    height: 8.2rem;
-    background-repeat: no-repeat; }
+    width: 5.85rem;
+    height: 7.67rem;
+    background-image: url(../images/box-coupons.png);
+    background-repeat: no-repeat;
+    background-size: 5.85rem auto;
+    background-position: center top; }
     .fade-page[data-js="coupon-box"] .coupon-share {
       width: 2.7rem;
       height: 0.66rem;
       position: absolute;
+      left: 1.68rem;
+      top: 5.76rem; }
+    .fade-page[data-js="coupon-box"] .coupon-prize {
+      width: 3.48rem;
+      height: 1.28rem;
+      color: #aa6901;
+      display: flex;
+      position: absolute;
+      justify-content: center;
       left: 50%;
-      transform: translateX(-50%); }
-    .fade-page[data-js="coupon-box"][data-type="1"] {
-      background-size: 6.4rem auto;
-      background-position: center top; }
-      .fade-page[data-js="coupon-box"][data-type="1"][data-theme="1"] {
-        background-image: url(../images/box-coupons-type-1.png); }
-      .fade-page[data-js="coupon-box"][data-type="1"][data-theme="2"] {
-        background-image: url(../images/box-coupons-type-2.png); }
-      .fade-page[data-js="coupon-box"][data-type="1"] .coupon-prize {
-        width: 1.78rem;
-        height: 1rem;
-        color: #fff;
-        display: flex;
-        position: absolute;
-        justify-content: center;
-        left: 0.74rem;
-        letter-spacing: -1px; }
-        .fade-page[data-js="coupon-box"][data-type="1"] .coupon-prize.coupon-money {
-          align-items: flex-start;
-          top: 4.75rem; }
-        .fade-page[data-js="coupon-box"][data-type="1"] .coupon-prize.coupon-discount {
-          align-items: flex-end;
-          bottom: 2.72rem; }
-          .fade-page[data-js="coupon-box"][data-type="1"] .coupon-prize.coupon-discount span {
-            margin-left: 0.06rem;
-            font-size: 0.4rem; }
-        .fade-page[data-js="coupon-box"][data-type="1"] .coupon-prize .coupon-text {
-          font-size: 0.3rem;
-          color: #fff;
-          font-style: normal; }
-        .fade-page[data-js="coupon-box"][data-type="1"] .coupon-prize .coupon-symbol {
-          font-style: normal;
-          font-family: Arial;
-          font-size: 0.36rem;
-          line-height: 1; }
-        .fade-page[data-js="coupon-box"][data-type="1"] .coupon-prize .coupone-number {
-          font-style: normal;
-          font-family: Arial;
-          font-size: 0.76rem;
-          line-height: 1; }
-      .fade-page[data-js="coupon-box"][data-type="1"] .coupon-range {
-        font-size: 0.26rem;
-        line-height: 0.38rem;
-        color: rgba(255, 255, 255, 0.8);
-        width: 3.5rem;
-        position: absolute;
-        left: 2.75rem;
-        top: 4.43rem; }
-      .fade-page[data-js="coupon-box"][data-type="1"] .coupon-time {
-        font-size: 0.19rem;
-        line-height: 1;
-        color: rgba(207, 86, 6, 0.8);
-        width: 3.5rem;
-        position: absolute;
-        left: 2.75rem;
-        top: 5.33rem; }
-      .fade-page[data-js="coupon-box"][data-type="1"] .coupon-share {
-        top: 7.06rem; }
-      .fade-page[data-js="coupon-box"][data-type="1"] .coupon-close {
-        display: block;
-        width: 0.76rem;
-        height: 0.76rem;
-        position: absolute;
-        left: 50%;
-        bottom: -1.48rem;
-        transform: translateX(-50%);
-        background-image: url(../images/close.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover; }
+      transform: translateX(-50%);
+      top: 0.76rem; }
+      .fade-page[data-js="coupon-box"] .coupon-prize.coupon-money {
+        align-items: baseline; }
+      .fade-page[data-js="coupon-box"] .coupon-prize.coupon-discount {
+        align-items: flex-end; }
+        .fade-page[data-js="coupon-box"] .coupon-prize.coupon-discount span {
+          margin-left: 0.06rem;
+          font-size: 0.72rem; }
+      .fade-page[data-js="coupon-box"] .coupon-prize .coupon-text {
+        font-size: 0.55rem;
+        font-style: normal; }
+      .fade-page[data-js="coupon-box"] .coupon-prize .coupon-symbol {
+        font-style: normal;
+        font-family: Arial;
+        font-size: 0.55rem;
+        line-height: 1; }
+      .fade-page[data-js="coupon-box"] .coupon-prize .coupone-number {
+        font-style: normal;
+        font-family: Arial;
+        font-size: 1.28rem;
+        line-height: 1; }
+    .fade-page[data-js="coupon-box"] .coupon-range {
+      font-size: 0.32rem;
+      line-height: 0.44rem;
+      color: #ffeb89;
+      width: 3.8rem;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 4.46rem;
+      text-align: center; }
+    .fade-page[data-js="coupon-box"] .coupon-time {
+      font-size: 0.2rem;
+      line-height: 1;
+      color: #aa6901;
+      width: 3.48rem;
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 2.24rem; }
+    .fade-page[data-js="coupon-box"] .coupon-close {
+      display: block;
+      width: 0.76rem;
+      height: 0.76rem;
+      position: absolute;
+      left: 50%;
+      bottom: -1.48rem;
+      transform: translateX(-50%);
+      background-image: url(../images/close.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
     .fade-page[data-js="coupon-box"][data-type="2"] {
       background-size: 7.32rem auto;
       background-position: center top;
